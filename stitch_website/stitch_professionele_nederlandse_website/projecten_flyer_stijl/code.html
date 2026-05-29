@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="nl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800;900&amp;family=Inter:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .halftone-bg {
+            background-image: radial-gradient(#4d4732 1px, transparent 0);
+            background-size: 20px 20px;
+            background-position: -10px -10px;
+        }
+        .diagonal-split {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .sticker-border {
+            filter: drop-shadow(4px 4px 0px #ffd700);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#38393a",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#4d4732",
+                        "surface-container-highest": "#333535",
+                        "error": "#ffb4ab",
+                        "primary-container": "#ffd700",
+                        "secondary": "#c8c6c5",
+                        "on-surface": "#e2e2e2",
+                        "surface": "#121414",
+                        "on-tertiary": "#303030",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-error": "#690005",
+                        "surface-variant": "#333535",
+                        "surface-container-low": "#1a1c1c",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-primary-container": "#705e00",
+                        "secondary-container": "#474746",
+                        "outline": "#999077",
+                        "on-tertiary-container": "#5f5f5f",
+                        "inverse-primary": "#705d00",
+                        "on-primary": "#3a3000",
+                        "on-surface-variant": "#d0c6ab",
+                        "surface-container-high": "#282a2b",
+                        "on-background": "#e2e2e2",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-primary-fixed-variant": "#544600",
+                        "on-secondary-container": "#b7b5b4",
+                        "surface-container": "#1e2020",
+                        "inverse-surface": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#221b00",
+                        "background": "#121414",
+                        "tertiary": "#f6f6f6",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-secondary": "#313030",
+                        "tertiary-container": "#dadada",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-tint": "#e9c400",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary-fixed-dim": "#e9c400",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "primary": "#fff6df",
+                        "primary-fixed": "#ffe16d",
+                        "surface-dim": "#121414",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Work Sans"],
+                        "display-xl": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="font-display-xl text-headline-md font-black italic text-primary-container uppercase">Tuin Perfect</div>
+<div class="hidden md:flex gap-md">
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="#">Diensten</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-primary-container border-b-2 border-primary-container pb-1" href="#">Portfolio</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="#">Over Ons</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary font-label-bold text-label-bold uppercase px-md py-sm hover:bg-white transition-all duration-300 active:scale-95">
+                Offerte Aanvragen
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[614px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide-angle photograph of a professionally landscaped luxury garden during sunset. The scene features clean geometric stone paving, perfectly manicured green lawn, and structural architectural plants. The lighting is warm and dramatic, highlighting the high-contrast textures of the dark stone and golden sky. The overall mood is prestigious and precise, reflecting a high-end Tuin Perfect project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKQclUX2k5TPo8g6s2N4ikA4p3-3VMADHqBhq4WWbc1PXwldPkVZiKXqwUvimqGBWUpNJ0DG_9BL35ymrjPmTrAFvtVEOT7xP7GtX3EZB_U4Pn96nqyPkbKL-3MMKIfAALqyBY_z4WpTg1-q8Ciwd2LMm5091JFNzzS1wbhyLbxjGXO3ibxkKh-SHj3NpLr7iKc84HUyCiqSf9BmQ3_bJ1_Lzuki64T8lnrGM1lkc_GJrt3ytfERLW9IjOVWWwmDfqhYl4_RWCcXmW"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
+<div class="absolute inset-0 halftone-bg opacity-20"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-lg w-full">
+<span class="inline-block bg-primary-container text-on-primary font-label-bold text-label-bold uppercase px-sm py-1 mb-md">Portfolio</span>
+<h1 class="font-display-xl text-display-xl text-white uppercase italic max-w-2xl leading-none">
+                Onze <span class="text-primary-container">Transformaties</span>
+</h1>
+<p class="font-headline-md text-headline-md text-white/90 mt-md">Resultaten die spreken.</p>
+</div>
+</header>
+<!-- Before & After Showcase -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="flex flex-col md:flex-row items-end justify-between mb-xl border-l-8 border-primary-container pl-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase italic leading-none">De Kracht van <br/> Vakmanschap</h2>
+<p class="text-on-surface-variant font-body-lg mt-sm max-w-md">Kijk mee hoe wij verwaarloosde tuinen omtoveren tot moderne buitenruimtes.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Before/After Slider Mockup (Static for UI) -->
+<div class="relative aspect-video border-4 border-surface-container-highest group cursor-pointer overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A stunning 'after' shot of a modern backyard garden featuring high-end dark grey porcelain tiles, a sleek wooden pergola, and minimalist planters with lush green ferns. The lighting is crisp and professional. The image demonstrates Tuin Perfect's precision in landscaping and construction with a bold, dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs-Oj3jEAFAFKmEB8X8e3WxynDw81FASLFSCGvZJx9PuC93YpK_ZRhRVmoMK8q2ubjTyNr7SR7y9CT2pggZ_yuvL8uMpYwBjYRD6jRvMr9OhqazKk0Sf0s3RUsPvGSW-2IuYoO4Aw7JgNaEm6qtLasPncYuiFgrJbDMsiXSxu01D9KfpkEJduV3K2duz5rmZ9SpEqwyhZSiDsj491Odgi5ToF_0hVkMrr4PYNjVh3l88plGMU5cxNE54Zk8vni-RO7ZP6INlUoUV3R"/>
+<div class="absolute inset-0 w-1/2 overflow-hidden border-r-4 border-primary-container">
+<img class="absolute inset-0 w-[200%] h-full object-cover grayscale opacity-80" data-alt="A gritty 'before' shot of an overgrown, messy garden with broken pavers and weeds. The lighting is flat and grey, emphasizing the state of neglect. This photo serves as the contrast to a professional landscaping transformation by Tuin Perfect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7uAdBhV74ujzkYA1n-akWE253XPStmx8if0q7BsU9_F4TOrWVUAo9fHJPkEc1IRyEWdOCr1bymguP_wNkvEX-OEdBXDuh9mx--Lfx7PcRY8BWp2Fk05VKJ1r52v1oVaA6YiKxBzoHZrG5nxv4m-1tbfT8DHiPLGvMh088l9Zm8nZMCHak7FBroinPzR0i0Z7GZj5DQhCHCR-d5yXxHNLJHgD9VP4xcy-gCQvxd10s-HKoRn00rqPEzh-JOBvz36ZmqCNKpAjsshls"/>
+</div>
+<!-- Handle -->
+<div class="absolute top-0 bottom-0 left-1/2 -ml-[2px] w-1 bg-primary-container z-20 flex items-center justify-center">
+<div class="w-10 h-10 bg-primary-container rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-on-primary">unfold_more</span>
+</div>
+</div>
+<!-- Labels -->
+<div class="absolute bottom-md left-md bg-black/80 px-sm py-1 font-label-bold text-label-bold text-white uppercase border border-white/20">Voor</div>
+<div class="absolute bottom-md right-md bg-primary-container px-sm py-1 font-label-bold text-label-bold text-on-primary uppercase">Na</div>
+</div>
+<div class="flex flex-col justify-center space-y-md">
+<div class="bg-surface-container-low p-lg border-r-4 border-primary-container relative">
+<div class="absolute -top-4 -left-4 bg-primary-container text-on-primary w-12 h-12 flex items-center justify-center font-black italic text-headline-md">1</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary-container mb-sm">Project Modern Loft</h3>
+<p class="text-on-surface-variant font-body-md italic">"De transformatie was ongelooflijk. Van een modderpoel naar een strakke, onderhoudsarme oase in slechts 5 dagen. Netjes en snel!"</p>
+<div class="flex gap-sm mt-md">
+<span class="bg-surface-container-highest px-sm py-1 font-label-bold text-xs uppercase">Bestrating</span>
+<span class="bg-surface-container-highest px-sm py-1 font-label-bold text-xs uppercase">Schutting</span>
+<span class="bg-surface-container-highest px-sm py-1 font-label-bold text-xs uppercase">Beplanting</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Project Gallery -->
+<section class="py-xl bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 halftone-bg opacity-10"></div>
+<div class="max-w-container-max mx-auto px-lg relative z-10">
+<h2 class="font-headline-lg text-headline-lg uppercase italic mb-xl text-center">Portfolio <span class="text-primary-container">Highlights</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-base md:gap-md">
+<!-- Large Featured Item -->
+<div class="md:col-span-8 group relative overflow-hidden h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="High-contrast architectural photograph of a luxury patio project. Dark basalt paving tiles are laid in a perfect grid pattern, surrounded by vibrant yellow architectural flowers that match the brand identity. The lighting is dramatic, casting long shadows. The style is bold, clean, and professional, showcasing precision labor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHG7d3--FjSX0OJ_3g47oCqIrsH9PygPha5D8twJUvts-oQcJ743XQBZ4ED0S6-gmDTrwnHwq_MKoVn_2syDU4ZLpZQW9NUqDq-11K-1s3qzQe89qYXFeZv2-E1jNEerWnEyTmbCYJERHbWds6XFXm4v0vBkEdVUi6moHF5QtsYAEHviqPWxpusIYAh1AvYFYQLzQmra8o99WL2Q0Y-CTSqBwVN5N0wT-b190QzH_VxlvVKCCfQRDSXkTUl11_ww3KgZ5tG95lzwfp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-lg">
+<h4 class="font-headline-md text-headline-md text-white uppercase italic">Strakke Bestrating - Den Haag</h4>
+<p class="text-primary-container font-label-bold uppercase">Keramische tegels &amp; Drainage</p>
+</div>
+</div>
+<!-- Tall Item -->
+<div class="md:col-span-4 group relative overflow-hidden h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up of a professional gardener using heavy tools to install a wooden terrace. The focus is on the precision of the joinery and the industrial quality of the materials. The lighting is high-contrast morning sun, emphasizing the physical labor and craftsmanship of Tuin Perfect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgNd4YiCXp8AvRySLQIIePni_5xZnPzZRx4iI4fLSVonErOdXCaKvnXLDnrXsiVvjJ0M1MA8M8DShiYFmR7E0kCHjRasnqrFw0a2ud36ocF7dpFCVKjmljXQwih0m_XNmZRpwgz03ScNOljbLLLAYHTfwJ_1ZrO7dg174AnPxSqSz0UlzLth6ZbLcPzXFTd5i3H3wHbxk-O7V4Pcw-wUxZ1-psfMSfHgy4nvG7J3f6HYfMP_wwGTF3bTA_AjWibLzEN026vvYaBlUO"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-primary-container text-on-primary px-md py-sm font-label-bold uppercase">Bekijk Project</span>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="md:col-span-4 group relative overflow-hidden h-[300px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A perfectly maintained green lawn with sharp edges next to a dark flower bed. The grass has visible mower lines, indicating professional maintenance. The style is clean and orderly, reflecting the 'Netjes &amp; Snel' brand motto." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrwfYw4bLVRkjM_UF0UYgn-_odgLDz-F60gVAVyAFBJKYFvtQpcT1GrIR8i-JJdE9cBzOE1VfPuCoJ6cMjH5zPv8t9V35HuU_mHxL7D__8tRa0QJ0iNic5oqHcOUWewHtW6ZqzcgRswKlrNYZ6MSwi2Lf2D7EXElc2NkTcFXAKTsiLT6RjIhD2H4LhCWuNwJO1h5OoBPJyvwo4nyQ4CWgIWvOuwH-ebDDMigs5XEp5de0UNBegia97BIqtr0JyqlJMLGWXLicMVNr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h4 class="font-label-bold text-white uppercase">Onderhoud - Wassenaar</h4>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden h-[300px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Architectural garden lighting at night. Warm LED spots highlight a structural tree against a dark fence. The design is modern and minimalist. The high-contrast lighting matches the gold and black brand palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKRX0qJtfVUofi4X60W4u1HydpHZ0YNr3ptURYP-C-tZJ75VsSvZELTCMz3xRpygzSDNpb1bsJT4Q3ou_53doa06d8D8P7cxbXpXPYWzzTavbBHGkW6_wjDEpIhxKLLH6HAQQNx2_UTsF7PQIlOMpXPUpKYF2YBsZJBJtT0ydY-mTcDaDSbzzihzLJnbVT-aafvjXU8EIEjhQ6R5BEKavnQ13Z0kHWyrlmb90utCXaQE6jDIhnLQh15YyRH9nl99NTNUfRIEDl3e1R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h4 class="font-label-bold text-white uppercase">Verlichting - Leiden</h4>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden h-[300px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional vertical garden or green wall installed on a dark grey exterior wall. The contrast between the organic green plants and the industrial building materials is sharp and modern. High-end landscaping detail by Tuin Perfect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnEzcC9DcbG1_fdylvm6HDZPPI1ZKfjN-nG9g48jr79DoZ5t4G45PLblHMvnZOelfWquqPKt1kt9Elzxst74pnnTz1G2qGQaDNN_5JV-dMg4OiPV21yvlYJDesRjFHwG_HL0G8uuGnr6E-oRoc7gkZKmpxRtQ3Qi-W8b4YC3Vo55iNUlcwto7R3SiiV6qY_7_3tlZ6j2FEunN2nfmk6dR4CMwF745U0m1XXlN7dl_oDKrredqBe-2x3wwFcvnWRa6QimDa_XV2nTOA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<h4 class="font-label-bold text-white uppercase">Verticaal Groen - Delft</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges / Stats Section -->
+<section class="py-xl bg-primary-container text-on-primary overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-full bg-black/10 -skew-x-12 transform translate-x-32"></div>
+<div class="max-w-container-max mx-auto px-lg relative z-10 flex flex-wrap justify-between gap-xl">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<div class="font-display-xl text-headline-lg leading-none">100%</div>
+<div class="font-label-bold uppercase">Tevredenheid</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'FILL' 1;">construction</span>
+<div>
+<div class="font-display-xl text-headline-lg leading-none">500+</div>
+<div class="font-label-bold uppercase">Projecten</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-[64px]" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<div>
+<div class="font-display-xl text-headline-lg leading-none">SNEL</div>
+<div class="font-label-bold uppercase">Oplevering</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-xl bg-surface relative">
+<div class="max-w-container-max mx-auto px-lg grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="sticker-border inline-block rotate-3">
+<img class="w-full h-auto border-8 border-white" data-alt="A portrait of a professional landscaper in a dark Tuin Perfect uniform, holding a high-end metal rake. He is standing in front of a modern garden. The style is like a professional flyer photo: sharp, heroic, and trustworthy. High-key lighting with a focus on the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoyRLoXnyfTrRYQxmIvnq5PHJLdbL-tmCHatf0HJN0s0t5ZKoukP_0Gz-wGk-wejWxFe8Z6CdQZ8vdkTAcOQtOAywGie_jvJdfZNBYT8qJFP6ZzLeMdcdHJgQNxB7_gHlnh9E6g4skOGZjUvvIXRlggOlrNe4nFqpNYj42vYyEOR1oAE4BlzvQ74j0ZPa0YAvnzFmA6UBmJeUvxWozEX9lNO5tj2AW71ycSJKL_iJKp0BzN5A7GeEpFhBDgrDAJoSBLda9k5D4M7Wc"/>
+</div>
+<!-- Floating Sticker Badge -->
+<div class="absolute -bottom-4 -right-4 bg-primary-container text-on-primary p-md rounded-full w-32 h-32 flex flex-col items-center justify-center text-center font-black leading-tight border-4 border-black rotate-12 shadow-xl">
+<span class="text-xs uppercase">Nu</span>
+<span class="text-xl">GRATIS</span>
+<span class="text-xs uppercase">ADVIES</span>
+</div>
+</div>
+<div class="space-y-lg">
+<h2 class="font-display-xl text-headline-lg uppercase italic text-white leading-tight">Uw tuin, onze <br/><span class="text-primary-container underline decoration-8">Perfectie.</span></h2>
+<p class="font-body-lg text-on-surface-variant">Klaar om uw buitenruimte naar een hoger niveau te tillen? Wij komen graag bij u langs voor een vrijblijvend adviesgesprek en een offerte op maat.</p>
+<form class="space-y-md">
+<div class="relative">
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline focus:border-primary-container focus:ring-0 text-white placeholder-on-surface-variant/50 py-sm px-0 transition-colors" placeholder="Naam" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-outline focus:border-primary-container focus:ring-0 text-white placeholder-on-surface-variant/50 py-sm px-0 transition-colors" placeholder="E-mailadres" type="email"/>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-display-xl text-headline-md uppercase italic py-md hover:bg-white transition-all duration-300">
+                        Start Uw Project
+                    </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-xl bg-surface-container-lowest border-t-4 border-primary-container">
+<div class="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-md">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<div class="font-display-xl text-headline-md font-black text-primary-container uppercase">Tuin Perfect</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Tuin Perfect. Netjes &amp; Snel.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Privacybeleid</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Algemene Voorwaarden</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors" href="#">Disclaimer</a>
+</div>
+<div class="flex gap-md">
+<a class="text-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px]">Notebook</span>
+</a>
+<a class="text-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[32px]">photo_camera</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

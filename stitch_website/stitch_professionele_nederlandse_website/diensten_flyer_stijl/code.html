@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="nl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Work+Sans:ital,wght@0,400;0,700;0,800;0,900;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#38393a",
+                      "error-container": "#93000a",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "outline-variant": "#4d4732",
+                      "surface-container-highest": "#333535",
+                      "error": "#ffb4ab",
+                      "primary-container": "#ffd700",
+                      "secondary": "#c8c6c5",
+                      "on-surface": "#e2e2e2",
+                      "surface": "#121414",
+                      "on-tertiary": "#303030",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-error": "#690005",
+                      "surface-variant": "#333535",
+                      "surface-container-low": "#1a1c1c",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "on-primary-container": "#705e00",
+                      "secondary-container": "#474746",
+                      "outline": "#999077",
+                      "on-tertiary-container": "#5f5f5f",
+                      "inverse-primary": "#705d00",
+                      "on-primary": "#3a3000",
+                      "on-surface-variant": "#d0c6ab",
+                      "surface-container-high": "#282a2b",
+                      "on-background": "#e2e2e2",
+                      "inverse-on-surface": "#2f3131",
+                      "surface-container-lowest": "#0c0f0f",
+                      "on-primary-fixed-variant": "#544600",
+                      "on-secondary-container": "#b7b5b4",
+                      "surface-container": "#1e2020",
+                      "inverse-surface": "#e2e2e2",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "on-primary-fixed": "#221b00",
+                      "background": "#121414",
+                      "tertiary": "#f6f6f6",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-secondary": "#313030",
+                      "tertiary-container": "#dadada",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-tint": "#e9c400",
+                      "on-secondary-fixed-variant": "#474746",
+                      "primary-fixed-dim": "#e9c400",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "primary": "#fff6df",
+                      "primary-fixed": "#ffe16d",
+                      "surface-dim": "#121414",
+                      "on-error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "lg": "48px",
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "md": "24px"
+              },
+              "fontFamily": {
+                      "label-bold": ["Work Sans"],
+                      "display-xl": ["Work Sans"],
+                      "headline-lg": ["Work Sans"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Work Sans"]
+              },
+              "fontSize": {
+                      "label-bold": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                      "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .halftone-bg {
+            background-image: radial-gradient(circle, #333 1px, transparent 1px);
+            background-size: 8px 8px;
+            opacity: 0.15;
+        }
+        .diagonal-stripe {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .sticker-border {
+            box-shadow: 0 0 0 4px #ffd700;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="font-display-xl text-headline-md font-black italic text-primary-container uppercase tracking-tighter">
+                Tuin Perfect
+            </div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-primary-container border-b-2 border-primary-container pb-1" href="#">Diensten</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="#">Portfolio</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="#">Over Ons</a>
+<a class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-md py-sm active:scale-95 transition-transform hover:bg-white transition-colors duration-300">
+                Offerte Aanvragen
+            </button>
+</div>
+</header>
+<!-- Hero Section with Industrial Feel -->
+<section class="relative bg-surface overflow-hidden pt-xl">
+<div class="absolute inset-0 halftone-bg"></div>
+<div class="relative max-w-container-max mx-auto px-lg py-xl flex flex-col md:flex-row items-center gap-xl">
+<div class="flex-1 space-y-md">
+<div class="inline-block bg-primary-container text-on-primary-container px-sm py-xs font-label-bold text-label-bold uppercase">
+                    Uw Tuin, Onze Passie
+                </div>
+<h1 class="font-display-xl text-display-xl text-white">
+                    PROFESSIONELE <br/><span class="text-primary-container italic">TUINVERZORGING</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Van strakke bestrating tot het snoeien van de hoogste heggen. Wij transformeren uw buitenruimte met de precisie van vakmanschap en de snelheid die u verwacht.
+                </p>
+<div class="flex gap-md pt-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold uppercase">Vakkundig</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold uppercase">Betrouwbaar</span>
+</div>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square bg-surface-container-highest border-4 border-primary-container rotate-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional landscaper in dark workwear meticulously pruning a perfectly shaped hedge with industrial power tools. The background shows a modern, high-contrast garden landscape under crisp morning sunlight, highlighting textures of green leaves and dark soil. The image captures the brand's essence of precision, manual labor, and professional excellence in garden maintenance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZBKObQYlHDyM6kNz7WQpoWOVEiCKxGNsfkqSlVWsl8LkVxnm5cbF0HSczZhothvGvkT0pP-kWDqn6ruuHoolgoSsK3F6yIG3CFDST0ErOY1ulIxdH5EbpyXeiDJwGJKsS6k8Jx4TpT7AeYBsuiS9C4wk5JC4oc9xcWKjipe7XBrOnAoM_ooMlunvtM-TQKCwQ6aUItbvTKdk1sJ618zKpjYR52huSE0g6JjVG5J4tzu_nwYbz-q9nY1jk91QTqZUIHz7NOQ8D1bBN"/>
+</div>
+<!-- Sticker Effect Badge -->
+<div class="absolute -bottom-base -left-base bg-white text-surface px-md py-md sticker-border -rotate-6 z-10">
+<div class="font-display-xl text-headline-md font-black uppercase leading-none">100%</div>
+<div class="font-label-bold text-label-bold uppercase">Tevredenheid</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="bg-surface-container-lowest py-xl">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="mb-xl">
+<h2 class="font-display-xl text-headline-lg text-white uppercase border-l-8 border-primary-container pl-md">
+                    Onze <span class="text-primary-container">Diensten</span>
+</h2>
+<p class="mt-sm text-on-surface-variant font-body-lg">Alles voor een perfecte buitenruimte, van aanleg tot afval.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+<!-- Service Card 1 -->
+<div class="md:col-span-2 bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors group p-lg relative overflow-hidden">
+<span class="material-symbols-outlined text-[64px] text-primary-container mb-md block" data-icon="landscaping">landscape</span>
+<h3 class="font-headline-md text-headline-md text-white uppercase mb-sm">Tuinaanleg</h3>
+<p class="text-on-surface-variant font-body-md mb-md">Van ontwerp tot realisatie. Wij leggen uw droomtuin aan met oog voor elk detail.</p>
+<div class="absolute bottom-0 right-0 p-md opacity-10 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-white" data-icon="architecture">architecture</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="grid_view">grid_view</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Bestrating</h3>
+<p class="text-on-surface-variant font-body-md">Strakke terrassen en opritbestrating met hoogwaardige materialen.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="content_cut">content_cut</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Heggen snoeien</h3>
+<p class="text-on-surface-variant font-body-md">Uw heggen weer kaarsrecht en gezond door onze vakmensen.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="eco">eco</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Onkruid</h3>
+<p class="text-on-surface-variant font-body-md">Grondige verwijdering van onkruid voor een nette uitstraling.</p>
+</div>
+<!-- Service Card 5 -->
+<div class="bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="cleaning_services">cleaning_services</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Tegelreiniging</h3>
+<p class="text-on-surface-variant font-body-md">Hardnekkig vuil en groene aanslag verdwijnen als sneeuw voor de zon.</p>
+</div>
+<!-- Service Card 6 -->
+<div class="md:col-span-2 bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg flex gap-md items-start">
+<div class="flex-1">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="park">park</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Bomen zagen</h3>
+<p class="text-on-surface-variant font-body-md">Veilig en vakkundig kappen of snoeien van bomen op elke locatie.</p>
+</div>
+<div class="hidden sm:block w-32 h-32 bg-surface-container border border-primary-container p-xs">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a powerful chainsaw blade cutting through a thick tree trunk, with wood chips flying in a dynamic, high-energy motion. The lighting is dramatic and gritty, emphasizing the textures of the bark and the metallic shine of the tool. The overall aesthetic is professional, industrial, and focused on the heavy-duty aspect of tree maintenance services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8OriwwVDnQwydKxuMrBWm85mczAnrcIKJWAD75cvwFTXrgpzMunoF6LV9JgBSN-oSBCm_ehTu0lb-FFWYGSvPEe7jJl-_3izyT2VSiH-jroddRd6FJDEgzpgs9chBPcVVeZaIQumjnDIqzldyxTF-FCrBWe3DBksOQcs7T_IyitxishHz4pRuMx5nbXbYlY2Avyj6bd6D9MPBETv73yov9oOjovd3tdryj0YG4jQkeXU01AAeqz5lRUhvMMhr-NiRbm7SxlIdQqe4"/>
+</div>
+</div>
+<!-- Service Card 7 -->
+<div class="bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="delete_outline">delete_outline</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Afvoer</h3>
+<p class="text-on-surface-variant font-body-md">Geen omkijken meer naar uw tuinafval; wij voeren het direct af.</p>
+</div>
+<!-- Service Card 8 -->
+<div class="bg-surface-container-high border border-outline-variant hover:border-primary-container transition-colors p-lg">
+<span class="material-symbols-outlined text-[48px] text-primary-container mb-md block" data-icon="fence">fence</span>
+<h3 class="font-label-bold text-headline-md text-white uppercase mb-sm">Schuttingen</h3>
+<p class="text-on-surface-variant font-body-md">Plaatsing van duurzame en stijlvolle erfafscheidingen.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- USP Section mimicking Flyer layout -->
+<section class="bg-primary-container py-xl overflow-hidden">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="flex flex-col md:flex-row justify-between items-center gap-xl">
+<div class="flex-1">
+<h2 class="font-display-xl text-headline-lg text-surface uppercase font-black italic leading-tight">
+                        WAAROM KIEZEN VOOR <br/>TUIN PERFECT?
+                    </h2>
+</div>
+<div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-md w-full">
+<div class="flex items-center gap-sm bg-surface p-sm border-b-4 border-surface-bright">
+<span class="material-symbols-outlined text-primary-container" data-icon="payments">payments</span>
+<span class="font-label-bold text-label-bold uppercase text-white">Scherpe prijzen</span>
+</div>
+<div class="flex items-center gap-sm bg-surface p-sm border-b-4 border-surface-bright">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified">verified</span>
+<span class="font-label-bold text-label-bold uppercase text-white">Vakkundig</span>
+</div>
+<div class="flex items-center gap-sm bg-surface p-sm border-b-4 border-surface-bright">
+<span class="material-symbols-outlined text-primary-container" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-bold text-label-bold uppercase text-white">Gratis afvoeren</span>
+</div>
+<div class="flex items-center gap-sm bg-surface p-sm border-b-4 border-surface-bright">
+<span class="material-symbols-outlined text-primary-container" data-icon="handshake">handshake</span>
+<span class="font-label-bold text-label-bold uppercase text-white">Betrouwbaar</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="relative py-xl bg-surface">
+<div class="absolute inset-0 halftone-bg"></div>
+<div class="max-w-4xl mx-auto px-lg text-center relative z-10 space-y-md">
+<h2 class="font-display-xl text-display-xl text-white uppercase italic">Klaar voor een <span class="text-primary-container underline decoration-4">perfecte</span> tuin?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Neem vandaag nog contact op voor een vrijblijvende offerte op maat. Wij werken netjes, snel en altijd met 100% tevredenheidsgarantie.
+            </p>
+<div class="pt-md flex flex-col sm:flex-row justify-center gap-md">
+<button class="bg-primary-container text-on-primary-container font-display-xl text-headline-md uppercase px-xl py-md active:scale-95 transition-transform hover:bg-white transition-colors duration-300">
+                    Direct Offerte
+                </button>
+<button class="bg-transparent border-4 border-primary-container text-primary-container font-display-xl text-headline-md uppercase px-xl py-md hover:bg-primary-container hover:text-on-primary-container transition-all">
+                    Bel Ons Nu
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-xl border-t-4 border-primary-container">
+<div class="flex flex-col md:flex-row justify-between items-center px-lg max-w-container-max mx-auto gap-md">
+<div class="font-display-xl text-headline-md font-black text-primary-container uppercase">
+                Tuin Perfect
+            </div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">Privacybeleid</a>
+<a class="text-on-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">Algemene Voorwaarden</a>
+<a class="text-on-surface-variant hover:text-white transition-colors font-body-md text-body-md" href="#">Disclaimer</a>
+</div>
+<div class="text-on-surface-variant font-body-md text-body-md">
+                © 2024 Tuin Perfect. Netjes &amp; Snel.
+            </div>
+</div>
+</footer>
+</body></html>

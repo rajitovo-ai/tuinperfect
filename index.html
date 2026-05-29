@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuin Perfect | Wij maken jouw tuin Perfect!</title>
+  <meta name="description" content="Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, heggen snoeien, onkruid en meer. Gratis afvoeren! Door heel Nederland en België. Bel 0685350145.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpeg" alt="Tuin Perfect" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <a href="contact.html" class="btn-primary" style="display: none;">Offerte Aanvragen</a>
+      
+      <button class="menu-toggle" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="diensten.html">Diensten</a>
+    <a href="projecten.html">Projecten</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="images/hero-eigenaar.jpg" alt="Tuin Perfect eigenaar aan het werk in een prachtige tuin">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="halftone-pattern" style="position: absolute; inset: 0;"></div>
+    
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="hero-content">
+        <div>
+          <div class="badge sticker-shadow" style="margin-bottom: 24px;">
+            <span>Altijd Perfect ★</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Wij maken<br>
+            <span>jouw tuin Perfect.</span>
+          </h1>
+          
+          <p class="hero-text">
+            Uw tuin, onze zorg. Van onkruid verwijderen tot complete tuinaanleg en bestrating — netjes, snel en 100% tevredenheid gegarandeerd. Door heel Nederland en België.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn-primary sticker-shadow" style="font-size: 18px; padding: 16px 32px;">
+              Gratis Offerte
+            </a>
+            <a href="projecten.html" class="btn-outline" style="font-size: 18px; padding: 16px 32px;">
+              Bekijk Projecten
+            </a>
+          </div>
+        </div>
+        
+        <div style="position: relative; display: none;" class="hero-image-side desktop-only">
+          <div class="guarantee-badge sticker-shadow">
+            <span class="number">100%</span>
+            <span class="text">Tevredenheid<br>Garantie</span>
+          </div>
+          
+          <div class="hero-image-frame sticker-shadow">
+            <img src="images/detail-patio.jpg" alt="Strakke patio met keramische tegels en tuinmeubilair" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <!-- Stats Banner -->
+  <section style="background-color: var(--color-primary-container); padding: 20px 0; border-top: 4px solid #000;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 12px; color: #000;">
+          <span class="material-symbols-outlined" style="font-size: 28px; font-variation-settings: 'FILL' 1;">verified</span>
+          <div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 22px; line-height: 1;">125+</div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Tevreden klanten</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; color: #000;">
+          <span class="material-symbols-outlined" style="font-size: 28px; font-variation-settings: 'FILL' 1;">schedule</span>
+          <div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 22px; line-height: 1;">24u</div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Reactietijd</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; color: #000;">
+          <span class="material-symbols-outlined" style="font-size: 28px; font-variation-settings: 'FILL' 1;">local_shipping</span>
+          <div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 22px; line-height: 1;">Gratis</div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Afvoeren</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; color: #000;">
+          <span class="material-symbols-outlined" style="font-size: 28px; font-variation-settings: 'FILL' 1;">flag</span>
+          <div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 22px; line-height: 1;">NL + BE</div>
+            <div style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Werkgebied</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: var(--color-surface-container-lowest); border-top: 4px solid var(--color-primary-container);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Onze <span>Expertise</span></h2>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <span class="material-symbols-outlined material-icon">deck</span>
+          </div>
+          <h3>Bestrating</h3>
+          <p>Hoogwaardig straatwerk voor opritten, terrassen en paden. Duurzaam en strak gelegd.</p>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-primary-container);">check_circle</span>
+              Sierbestrating
+            </li>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-primary-container);">check_circle</span>
+              Opritten
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 2 - Featured -->
+        <div class="service-card featured sticker-shadow">
+          <div class="service-icon">
+            <span class="material-symbols-outlined material-icon">grass</span>
+          </div>
+          <h3>Tuinaanleg</h3>
+          <p>Complete transformatie van uw tuin. Van ontwerp tot de laatste plant in de grond.</p>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px;">star</span>
+              Beplanting & Gazon
+            </li>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px;">star</span>
+              Schuttingen
+            </li>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px;">star</span>
+              Overkappingen
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <span class="material-symbols-outlined material-icon">handyman</span>
+          </div>
+          <h3>Onderhoud</h3>
+          <p>Houd uw tuin in topconditie met onze periodieke onderhoudsservice.</p>
+          <ul>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-primary-container);">check_circle</span>
+              Snoeiwerk
+            </li>
+            <li>
+              <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-primary-container);">check_circle</span>
+              Onkruidbestrijding
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Section -->
+  <section class="before-after">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 48px;">
+        <div>
+          <span style="color: var(--color-primary-container); font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Resultaten Die Spreken</span>
+          <h2 class="section-title">Voor &amp; Na</h2>
+        </div>
+        <div style="border-left: 4px solid var(--color-primary-container); padding-left: 24px; max-width: 500px;">
+          <p style="color: var(--color-on-surface-variant); font-style: italic;">"Geen uitdaging is te groot. Bekijk hoe wij verwaarloosde tuinen omtoveren tot nette, strakke buitenruimtes — netjes en snel."</p>
+        </div>
+      </div>
+      
+      <!-- Project 1: Haag snoeien -->
+      <div class="before-after-container" style="margin-bottom: 32px;">
+        <div style="position: relative; overflow: hidden;">
+          <img src="images/before-after-haag-voor.jpg" alt="Voor en na haag snoeien - Tuin Perfect" style="width: 100%; height: 420px; object-fit: cover; object-position: center;">
+        </div>
+        <div style="background-color: var(--color-surface-container-low); padding: 32px; border-right: 4px solid var(--color-primary-container); position: relative; display: flex; flex-direction: column; justify-content: center;">
+          <div style="position: absolute; top: -16px; left: -16px; background-color: var(--color-primary-container); color: #000; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 24px; font-style: italic;">1</div>
+          <h3 style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 22px; text-transform: uppercase; color: var(--color-primary-container); margin-bottom: 12px;">Haag Snoeien</h3>
+          <p style="color: var(--color-on-surface-variant); font-style: italic; margin-bottom: 20px;">"Van een enorme, verwilderde haag naar een strak gesnoeid geheel. Op één dag geregeld!"</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Heggen snoeien</span>
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Afvoer inbegrepen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Voortuin bestrating -->
+      <div class="before-after-container" style="margin-bottom: 32px;">
+        <div style="position: relative; overflow: hidden;">
+          <img src="images/before-after-voortuin.jpg" alt="Voor en na voortuin transformatie - Tuin Perfect" style="width: 100%; height: 420px; object-fit: cover; object-position: top;">
+        </div>
+        <div style="background-color: var(--color-surface-container-low); padding: 32px; border-right: 4px solid var(--color-primary-container); position: relative; display: flex; flex-direction: column; justify-content: center;">
+          <div style="position: absolute; top: -16px; left: -16px; background-color: var(--color-primary-container); color: #000; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 24px; font-style: italic;">2</div>
+          <h3 style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 22px; text-transform: uppercase; color: var(--color-primary-container); margin-bottom: 12px;">Voortuin Transformatie</h3>
+          <p style="color: var(--color-on-surface-variant); font-style: italic; margin-bottom: 20px;">"Overwoekerde voortuin volledig omgebouwd naar een strakke tegelvloer met witte kiezels. Prachtig resultaat!"</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Tuinaanleg</span>
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Bestrating</span>
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Kiezels</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Complete tuin -->
+      <div class="before-after-container">
+        <div style="position: relative; overflow: hidden;">
+          <img src="images/before-after-bestrating.jpg" alt="Voor en na complete tuin met bestrating en loungeset - Tuin Perfect" style="width: 100%; height: 420px; object-fit: cover; object-position: center;">
+        </div>
+        <div style="background-color: var(--color-surface-container-low); padding: 32px; border-right: 4px solid var(--color-primary-container); position: relative; display: flex; flex-direction: column; justify-content: center;">
+          <div style="position: absolute; top: -16px; left: -16px; background-color: var(--color-primary-container); color: #000; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 24px; font-style: italic;">3</div>
+          <h3 style="font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 22px; text-transform: uppercase; color: var(--color-primary-container); margin-bottom: 12px;">Complete Tuinaanleg</h3>
+          <p style="color: var(--color-on-surface-variant); font-style: italic; margin-bottom: 20px;">"Volledige achtertuin gesloopt en opnieuw aangelegd. Nieuwe tegels, kunstgras en beplanting. Van rommelig naar lounge-ready!"</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Bestrating</span>
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Kunstgras</span>
+            <span style="background-color: var(--color-surface-container-highest); padding: 4px 12px; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase;">Beplanting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Banner -->
+  <section class="trust-banner">
+    <div class="marquee">
+      <div class="marquee-item">
+        <span>Gratis Offerte</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+        <span>Vakmanschap</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+        <span>Binnen 48 Uur</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+        <span>Geen Verrassingen</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+      </div>
+      <div class="marquee-item">
+        <span>Gratis Offerte</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+        <span>Vakmanschap</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+        <span>Binnen 48 Uur</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+        <span>Geen Verrassingen</span>
+        <span class="material-symbols-outlined star">star_rate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section style="background-color: var(--color-surface);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 48px; background-color: var(--color-surface-container-high); border-bottom: 8px solid var(--color-primary-container);" class="sticker-shadow contact-cta-grid">
+        <div style="padding: 48px;">
+          <h2 class="section-title" style="margin-bottom: 24px;">Klaar voor een <span>Perfecte</span> Tuin?</h2>
+          <p style="font-size: 18px; color: var(--color-tertiary-fixed); margin-bottom: 32px;">Stuur een berichtje en wij nemen binnen 24 uur contact op voor een vrijblijvende offerte op locatie. Wij rijden door heel Nederland en België!</p>
+          
+          <form style="display: flex; flex-direction: column; gap: 24px;">
+            <div class="form-group">
+              <input type="text" placeholder="Naam" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="E-mailadres" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Uw Bericht" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-primary sticker-shadow" style="font-size: 20px; padding: 16px;">
+              Verstuur Aanvraag
+            </button>
+          </form>
+        </div>
+        
+        <div style="position: relative; overflow: hidden; min-height: 400px;" class="contact-image-side desktop-only">
+          <img src="images/contact-werk.jpg" alt="Tuin Perfect team aan het werk in de tuin" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.7s;" loading="lazy">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);"></div>
+          
+          <div style="position: absolute; bottom: 32px; left: 32px; right: 32px; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(8px); padding: 24px; border-left: 4px solid var(--color-primary-container);">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
+              <span class="material-symbols-outlined" style="color: var(--color-primary-container); font-size: 24px;">phone_in_talk</span>
+              <a href="tel:0685350145" style="font-family: 'Work Sans', sans-serif; font-weight: 900; font-size: 24px; color: #fff;">06 8535 0145</a>
+            </div>
+            <p style="color: #999; font-family: 'Work Sans', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;">Maandag - Zaterdag: 08:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">Tuin Perfect</div>
+          <p style="max-width: 300px; color: var(--color-on-surface-variant); font-size: 14px; margin-top: 16px;">Uw tuin, onze zorg. Altijd perfect! Wij werken door heel Nederland en België voor particulieren en bedrijven.</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="diensten.html">Diensten</a>
+          <a href="projecten.html">Onze Projecten</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacybeleid</a>
+          <a href="#">Algemene Voorwaarden</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Tuin Perfect - Uw Tuin, Onze Zorg. Altijd Perfect!</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          <span>Beschikbaar voor Nieuwe Projecten</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
