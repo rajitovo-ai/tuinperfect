@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecten | Tuin Perfect - Bekijk Ons Werk</title>
+    <link rel="icon" href="../logo/favicon.png" type="image/png">
+    <meta name="description" content="Bekijk afgeronde projecten van Tuin Perfect: tuinaanleg, bestrating, snoeien en meer. Voor & na foto's.">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/tp-colors.css">
+    <style>
+        .ba-card { position:relative; width:100%; height:288px; overflow:hidden; cursor:ew-resize; user-select:none; }
+        .ba-after-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        .ba-before-layer { position:absolute; inset:0; overflow:hidden; width:50%; }
+        .ba-before-img { position:absolute; top:0; left:0; height:100%; width:var(--ba-card-w,400px); max-width:none; object-fit:cover; }
+        .ba-divider-line { position:absolute; top:0; bottom:0; width:3px; background:white; left:50%; transform:translateX(-50%); pointer-events:none; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white overflow-x-hidden">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex items-center">
+                    <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" style="height:52px; width:auto;">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="diensten.html" class="nav-link">Diensten</a>
+                    <a href="projecten.html" class="nav-link text-gg-orange">Projecten</a>
+                    <a href="contact.html" class="btn-primary text-sm py-3 px-6">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#1a1a1a;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 font-medium text-gg-green">Home</a>
+                <a href="diensten.html" class="block py-2 font-medium text-gg-green">Diensten</a>
+                <a href="projecten.html" class="block py-2 font-medium text-gg-orange">Projecten</a>
+                <a href="contact.html" class="block py-2 font-medium text-gg-green">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gg-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-gg-orange font-semibold uppercase tracking-wider text-sm fade-in">Ons Werk</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gg-green mt-3 mb-6 fade-in">Afgeronde Projecten</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in">Bekijk de resultaten van onze recente opdrachten — van tuinaanleg tot bestrating en onderhoud</p>
+        </div>
+    </section>
+
+    <!-- Filter + Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in">
+                <button class="filter-btn active" data-filter="all">Alles</button>
+                <button class="filter-btn" data-filter="tuinaanleg">Tuinaanleg</button>
+                <button class="filter-btn" data-filter="bestrating">Bestrating</button>
+                <button class="filter-btn" data-filter="onderhoud">Onderhoud</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto" id="project-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in" data-cat="bestrating">
+                    <img src="../images/before-after-bestrating.jpg" alt="Terras bestrating" class="w-full h-72 object-cover" loading="lazy">
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Bestrating</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Terras & Oprit</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2: Voor/Na -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in" data-cat="tuinaanleg">
+                    <div class="relative w-full h-72 flex">
+                        <div class="w-1/2 h-full relative">
+                            <img src="../images/before-after-voortuin.jpg" alt="Voortuin voor" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 bg-black/75 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Voor</span>
+                        </div>
+                        <div class="w-1/2 h-full relative">
+                            <img src="../images/before-after-bestrating.jpg" alt="Voortuin na" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 right-4 bg-gg-green text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Na</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Tuinaanleg</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Voortuin Transformatie</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3: BA slider card -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in" data-cat="onderhoud">
+                    <div class="ba-card" id="ba-card-1">
+                        <img class="ba-after-img" src="../images/before-after-haag-voor.jpg" alt="Na snoeien" loading="lazy">
+                        <div class="ba-before-layer" id="ba-layer-1">
+                            <img class="ba-before-img" id="ba-img-1" src="../images/contact-visual.jpg" alt="Voor snoeien" loading="lazy">
+                        </div>
+                        <div class="ba-divider-line" id="ba-div-1"></div>
+                        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:#FCD202;border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:10;">
+                            <svg fill="none" stroke="#000" viewBox="0 0 24 24" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                        </div>
+                        <span style="position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.75);color:white;padding:6px 12px;border-radius:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;z-index:5;">Voor</span>
+                        <span style="position:absolute;top:12px;right:12px;background:#FCD202;color:#000;padding:6px 12px;border-radius:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;z-index:5;">Na</span>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Onderhoud</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Haag Snoeien</h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in" data-cat="tuinaanleg">
+                    <img src="../images/hero-eigenaar.jpg" alt="Complete tuinaanleg" class="w-full h-72 object-cover" loading="lazy">
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Tuinaanleg</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Complete Achtertuin</h3>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in" data-cat="bestrating">
+                    <img src="../images/contact-werk.jpg" alt="Oprit aanleg" class="w-full h-72 object-cover" loading="lazy">
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Bestrating</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Oprit Aanleg</h3>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in" data-cat="onderhoud">
+                    <img src="../images/contact-visual.jpg" alt="Tuin onderhoud" class="w-full h-72 object-cover" loading="lazy">
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Onderhoud</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Periodiek Onderhoud</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gg-green">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 fade-in">Uw tuin de volgende transformatie?</h2>
+            <p class="text-white/90 text-lg max-w-2xl mx-auto mb-10 fade-in">Vraag vandaag nog een gratis offerte aan.</p>
+            <div class="fade-in">
+                <a href="contact.html" class="inline-block bg-white font-bold py-4 px-10 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg" style="color:#1a1a1a;">GRATIS OFFERTE AANVRAGEN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gg-green-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" style="height:40px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                    <p class="text-white/80 text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect! Professioneel tuinwerk door heel Nederland en België.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Snelle Links</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="index.html" class="hover:text-gg-orange transition-colors">Home</a></li>
+                        <li><a href="diensten.html" class="hover:text-gg-orange transition-colors">Diensten</a></li>
+                        <li><a href="projecten.html" class="hover:text-gg-orange transition-colors">Projecten</a></li>
+                        <li><a href="contact.html" class="hover:text-gg-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:0685350145" class="hover:text-gg-orange transition-colors">06 8535 0145</a></li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:info@tuinperfect.nl" class="hover:text-gg-orange transition-colors">info@tuinperfect.nl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+                <p>&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(fb => {
+            fb.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                fb.classList.add('active');
+                const filter = fb.dataset.filter;
+                document.querySelectorAll('#project-grid [data-cat]').forEach(card => {
+                    card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+                });
+            });
+        });
+
+        // BA Card slider
+        const card = document.getElementById('ba-card-1');
+        const layer = document.getElementById('ba-layer-1');
+        const img = document.getElementById('ba-img-1');
+        const divLine = document.getElementById('ba-div-1');
+        let drag = false;
+        const updateCard = (x) => {
+            const r = card.getBoundingClientRect();
+            img.style.setProperty('--ba-card-w', r.width + 'px');
+            img.style.width = r.width + 'px';
+            let pct = Math.max(5, Math.min(95, ((x - r.left) / r.width) * 100));
+            layer.style.width = pct + '%';
+            divLine.style.left = pct + '%';
+        };
+        card.addEventListener('mousedown', (e) => { drag = true; updateCard(e.clientX); });
+        document.addEventListener('mouseup', () => drag = false);
+        document.addEventListener('mousemove', (e) => { if (drag) updateCard(e.clientX); });
+        card.addEventListener('touchstart', (e) => { drag = true; updateCard(e.touches[0].clientX); }, { passive: true });
+        document.addEventListener('touchend', () => drag = false);
+        card.addEventListener('touchmove', (e) => { if (drag) updateCard(e.touches[0].clientX); }, { passive: true });
+        // Init width
+        const r = card.getBoundingClientRect();
+        img.style.width = r.width + 'px';
+
+        // Fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

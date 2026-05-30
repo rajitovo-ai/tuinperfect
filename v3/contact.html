@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Tuin Perfect - Vrijblijvende Offerte</title>
+    <link rel="icon" href="../logo/favicon.png" type="image/png">
+    <meta name="description" content="Neem contact op met Tuin Perfect. Gratis offerte op locatie. Telefoon: 0685350145. Email: info@tuinperfect.nl. Nederland en België.">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/tp-colors.css">
+    <style>
+        .contact-card { background:white; border-radius:16px; padding:32px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:transform 0.3s ease,box-shadow 0.3s ease; }
+        .contact-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.1); }
+        .faq-item { border-bottom:1px solid #e5e7eb; padding:20px 0; }
+        .faq-question { cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600; color:#1a1a1a; }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s ease,padding 0.3s ease; color:#6b7280; }
+        .faq-answer.open { max-height:200px; padding-top:12px; }
+        .faq-icon { transition:transform 0.3s ease; }
+        .faq-icon.open { transform:rotate(180deg); }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white overflow-x-hidden">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex items-center">
+                    <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" style="height:52px; width:auto;">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="diensten.html" class="nav-link">Diensten</a>
+                    <a href="projecten.html" class="nav-link">Projecten</a>
+                    <a href="contact.html" class="btn-primary text-sm py-3 px-6">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#1a1a1a;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 font-medium text-gg-green">Home</a>
+                <a href="diensten.html" class="block py-2 font-medium text-gg-green">Diensten</a>
+                <a href="projecten.html" class="block py-2 font-medium text-gg-green">Projecten</a>
+                <a href="contact.html" class="block py-2 font-medium text-gg-orange">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 bg-gg-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-gg-orange font-semibold uppercase tracking-wider text-sm fade-in">Vrijblijvend & Gratis</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gg-green mt-3 mb-6 fade-in">Contact</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in">
+                Vul het formulier in, bel of mail ons. Wij komen gratis langs om uw tuin te bekijken — zodat wij een passende offerte kunnen opstellen.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact kaarten -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="contact-card text-center fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gg-green mb-2">Telefoon</h3>
+                    <p class="text-gray-600 mb-4">Direct contact? Bel ons gerust.</p>
+                    <a href="tel:0685350145" class="text-gg-orange font-bold text-lg hover:underline">06 8535 0145</a>
+                </div>
+                <div class="contact-card text-center fade-in">
+                    <div class="w-16 h-16 bg-gg-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gg-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gg-green mb-2">Email</h3>
+                    <p class="text-gray-600 mb-4">Stuur ons een bericht.</p>
+                    <a href="mailto:info@tuinperfect.nl" class="text-gg-orange font-bold text-lg hover:underline">info@tuinperfect.nl</a>
+                </div>
+                <div class="contact-card text-center fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gg-green mb-2">Openingstijden</h3>
+                    <p class="text-gray-600 mb-2">Ma – Za: 08:00 – 18:00</p>
+                    <p class="text-gg-orange font-bold">Binnen 24u reactie</p>
+                </div>
+                <div class="contact-card text-center fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gg-green mb-2">Werkgebied</h3>
+                    <p class="text-gray-600">Heel Nederland & België</p>
+                    <p class="text-gg-orange font-bold mt-1">Gratis offerte op locatie</p>
+                </div>
+            </div>
+
+            <!-- Form + FAQ -->
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="fade-in">
+                    <h2 class="text-2xl font-bold text-gg-green mb-6">Stuur een bericht</h2>
+                    <form class="bg-gg-gray rounded-2xl p-8 shadow-lg" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Naam *</label>
+                                <input type="text" name="naam" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white" placeholder="Uw naam">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Telefoon</label>
+                                <input type="tel" name="telefoon" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white" placeholder="06 — — — —">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white" placeholder="uw@email.nl">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Gewenste Dienst</label>
+                            <select name="dienst" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white">
+                                <option>Tuinaanleg</option>
+                                <option>Bestrating</option>
+                                <option>Periodiek Onderhoud</option>
+                                <option>Snoeien / Heggen</option>
+                                <option>Onkruidbestrijding</option>
+                                <option>Tuin Opruimen</option>
+                                <option>Anders / Ik weet het nog niet</option>
+                            </select>
+                        </div>
+                        <div class="mb-8">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Bericht *</label>
+                            <textarea name="bericht" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all resize-none bg-white" placeholder="Beschrijf uw wensen of vraag..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-primary py-4 text-lg">Verstuur Bericht</button>
+                        <p class="text-sm text-gray-500 mt-4">* Verplichte velden. Wij nemen binnen 24 uur contact met u op.</p>
+                    </form>
+                    <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-sm font-medium"></div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="fade-in">
+                    <h2 class="text-2xl font-bold text-gg-green mb-6">Veelgestelde vragen</h2>
+                    <div class="space-y-0">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Wat kost een offerte?</span>
+                                <svg class="faq-icon w-5 h-5 text-gg-green flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="faq-answer">Een offerte is altijd gratis en vrijblijvend. Wij komen bij u langs om de tuin te bekijken en geven u een eerlijke prijs.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Werken jullie door heel Nederland?</span>
+                                <svg class="faq-icon w-5 h-5 text-gg-green flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="faq-answer">Ja! Wij zijn actief door heel Nederland én België, voor zowel particulieren als bedrijven. Geen reiskosten extra.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Hoe snel kunnen jullie beginnen?</span>
+                                <svg class="faq-icon w-5 h-5 text-gg-green flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="faq-answer">In de meeste gevallen kunnen wij binnen enkele dagen bij u langskomen voor een offerte en snel daarna starten met het werk.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Is afvoer van groenafval inbegrepen?</span>
+                                <svg class="faq-icon w-5 h-5 text-gg-green flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="faq-answer">Ja! Bij al onze tuindiensten is het afvoeren van groenafval, snoeisel en puin altijd gratis inbegrepen. U hoeft nergens over na te denken.</div>
+                        </div>
+                        <div class="faq-item" style="border-bottom:none">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Is er garantie op het werk?</span>
+                                <svg class="faq-icon w-5 h-5 text-gg-green flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </div>
+                            <div class="faq-answer">Absoluut. 100% tevredenheid is onze standaard. Als u niet tevreden bent, komen wij terug om het op te lossen — dat is onze belofte.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gg-green-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" style="height:40px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                    <p class="text-white/80 text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect! Professioneel tuinwerk door heel Nederland en België.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Snelle Links</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="index.html" class="hover:text-gg-orange transition-colors">Home</a></li>
+                        <li><a href="diensten.html" class="hover:text-gg-orange transition-colors">Diensten</a></li>
+                        <li><a href="projecten.html" class="hover:text-gg-orange transition-colors">Projecten</a></li>
+                        <li><a href="contact.html" class="hover:text-gg-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:0685350145" class="hover:text-gg-orange transition-colors">06 8535 0145</a></li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:info@tuinperfect.nl" class="hover:text-gg-orange transition-colors">info@tuinperfect.nl</a></li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Nederland &amp; België</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+                <p>&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+
+        function toggleFaq(el) {
+            const answer = el.nextElementSibling;
+            const icon = el.querySelector('.faq-icon');
+            answer.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const feedback = document.getElementById('form-feedback');
+            feedback.textContent = 'Bedankt! Wij nemen binnen 24 uur contact met u op.';
+            feedback.className = 'mt-4 p-4 rounded-lg text-sm font-medium bg-green-100 text-green-700';
+            e.target.style.display = 'none';
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

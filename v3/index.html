@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuin Perfect | Wij maken jouw tuin Perfect!</title>
+    <link rel="icon" href="../logo/favicon.png" type="image/png">
+    <meta name="description" content="Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, heggen snoeien, onkruid en meer. Gratis afvoeren! Door heel Nederland en België. Bel 0685350145.">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/tp-colors.css">
+    <style>
+        .ba-slider {
+            position: relative; width: 100%; max-width: 1200px; margin: 0 auto;
+            height: 600px; overflow: hidden; border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            user-select: none; -webkit-user-select: none; touch-action: pan-y;
+        }
+        .ba-slider img { position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+        .ba-after { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; }
+        .ba-after img { width:100%; height:100%; object-fit:cover; }
+        .ba-before { position:absolute; top:0; left:0; width:50%; height:100%; overflow:hidden; z-index:2; transition:width 0.1s ease-out; }
+        .ba-before-inner { position:absolute; top:0; left:0; overflow:hidden; }
+        .ba-before-inner img { width:100%; height:100%; object-fit:cover; display:block; }
+        .ba-divider { position:absolute; top:0; left:50%; width:3px; height:100%; background:linear-gradient(to bottom,transparent 0%,white 10%,white 90%,transparent 100%); z-index:10; cursor:ew-resize; transition:left 0.1s ease-out; box-shadow:0 0 30px rgba(0,0,0,0.4); }
+        .ba-handle { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:white; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 0 4px rgba(252,210,2,0.35); z-index:11; cursor:ew-resize; transition:transform 0.2s ease,box-shadow 0.2s ease,left 0.1s ease-out; }
+        .ba-handle:hover { transform:translate(-50%,-50%) scale(1.1); box-shadow:0 12px 40px rgba(0,0,0,0.5),0 0 0 6px rgba(252,210,2,0.45); }
+        .ba-handle:active { transform:translate(-50%,-50%) scale(0.95); }
+        .ba-handle-arrows { display:flex; align-items:center; gap:2px; color:#FCD202; }
+        .ba-handle-arrows svg { width:16px; height:16px; transition:transform 0.2s ease; }
+        .ba-handle:hover .ba-handle-arrows svg:first-child { transform:translateX(-2px); }
+        .ba-handle:hover .ba-handle-arrows svg:last-child { transform:translateX(2px); }
+        .ba-label { position:absolute; top:24px; background:rgba(0,0,0,0.75); backdrop-filter:blur(8px); color:white; padding:10px 20px; border-radius:8px; font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:1.5px; z-index:5; border:1px solid rgba(255,255,255,0.1); }
+        .ba-label-before { left:24px; }
+        .ba-label-after { right:24px; }
+        .ba-hint { position:absolute; bottom:24px; left:50%; transform:translateX(-50%); background:rgba(252,210,2,0.95); color:#000; padding:10px 20px; border-radius:30px; font-weight:600; font-size:13px; z-index:15; display:flex; align-items:center; gap:8px; animation:pulse 2s infinite; box-shadow:0 4px 15px rgba(252,210,2,0.4); }
+        .ba-hint svg { width:18px; height:18px; }
+        @keyframes pulse { 0%,100% { opacity:1; transform:translateX(-50%) scale(1); } 50% { opacity:0.8; transform:translateX(-50%) scale(0.98); } }
+        .ba-slider.dragging .ba-before, .ba-slider.dragging .ba-divider, .ba-slider.dragging .ba-handle { transition:none; }
+        .ba-slider.dragging .ba-hint { opacity:0; animation:none; }
+        @media (max-width:768px) {
+            .ba-slider { height:350px; border-radius:12px; }
+            .ba-handle { width:48px; height:48px; }
+            .ba-label { top:16px; padding:8px 14px; font-size:11px; }
+            .ba-hint { bottom:16px; padding:8px 16px; font-size:12px; }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex items-center">
+                    <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" style="height:52px; width:auto;">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gg-orange">Home</a>
+                    <a href="diensten.html" class="nav-link">Diensten</a>
+                    <a href="projecten.html" class="nav-link">Projecten</a>
+                    <a href="contact.html" class="btn-primary text-sm py-3 px-6">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#1a1a1a;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 font-medium text-gg-orange">Home</a>
+                <a href="diensten.html" class="block py-2 font-medium text-gg-green">Diensten</a>
+                <a href="projecten.html" class="block py-2 font-medium text-gg-green">Projecten</a>
+                <a href="contact.html" class="block py-2 font-medium text-gg-green">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 bg-gg-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="text-center mb-10 fade-in">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gg-green mb-4 leading-tight">
+                    Uw tuin, onze zorg.
+                </h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Professionele tuinaanleg, bestrating en onderhoud voor particulieren en bedrijven in Nederland en België
+                </p>
+            </div>
+
+            <!-- Before/After Slider -->
+            <div class="max-w-5xl mx-auto fade-in">
+                <div class="ba-slider" id="ba-slider">
+                    <div class="ba-after">
+                        <img src="../images/before-after-bestrating.jpg" alt="Na tuinaanleg" width="1920" height="1080" fetchpriority="high">
+                    </div>
+                    <div class="ba-before" id="ba-before">
+                        <div class="ba-before-inner" id="ba-before-inner">
+                            <img src="../images/before-after-voortuin.jpg" alt="Voor tuinaanleg" width="1920" height="1080" fetchpriority="high">
+                        </div>
+                    </div>
+                    <div class="ba-label ba-label-before">Voor</div>
+                    <div class="ba-label ba-label-after">Na</div>
+                    <div class="ba-divider" id="ba-divider"></div>
+                    <div class="ba-handle" id="ba-handle">
+                        <div class="ba-handle-arrows">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                    <div class="ba-hint" id="ba-hint">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l-4 3 4 3M16 9l4 3-4 3"/></svg>
+                        Sleep om te vergelijken
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="contact.html" class="btn-primary text-lg">Gratis Offerte Aanvragen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke-width="1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gg-green mb-2">Snel & Efficiënt</h3>
+                    <p class="text-gray-600 text-sm">Binnen 24 uur reactie. Wij komen gratis bij u langs voor een passende offerte op maat.</p>
+                </div>
+                <div class="fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gg-green mb-2">100% Tevredenheid</h3>
+                    <p class="text-gray-600 text-sm">Vakmanschap gegarandeerd. Elke tuin netjes, snel en precies zoals u het wenst.</p>
+                </div>
+                <div class="fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gg-green mb-2">Gratis Offerte</h3>
+                    <p class="text-gray-600 text-sm">Ik kom vrijblijvend langs om uw tuin te bekijken. Geen kosten, geen verplichtingen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diensten Section -->
+    <section id="diensten" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-gg-orange font-semibold uppercase tracking-wider text-sm">Onze Expertise</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gg-green mt-3 mb-4">
+                    Professionele Diensten
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Van tuinaanleg tot bestrating en periodiek onderhoud — wij zorgen voor een perfecte buitenruimte
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="service-card bg-gg-gray rounded-2xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18M3 6h18M3 18h18"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gg-green mb-3">Bestrating & Tuinaanleg</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Hoogwaardige bestrating voor opritten, terrassen en paden. Complete tuinaanleg van ontwerp tot de laatste plant.
+                    </p>
+                    <a href="diensten.html" class="text-gg-orange font-semibold hover:underline">Meer Info →</a>
+                </div>
+                <div class="service-card bg-gg-gray rounded-2xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-gg-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-gg-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22v-8M12 14c-3-2-5-5-3-8 2 3 5 4 3 8zM12 10c3-2 5-5 3-8-2 3-5 4-3 8zM8 18c-2 1-4 0-5-2M16 18c2 1 4 0 5-2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gg-green mb-3">Onderhoud & Snoeien</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Periodiek tuinonderhoud inclusief onkruidverwijdering, heggen snoeien en gratis afvoer van groenafval.
+                    </p>
+                    <a href="diensten.html" class="text-gg-orange font-semibold hover:underline">Meer Info →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gg-green">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 fade-in">
+                Klaar voor een perfecte tuin?
+            </h2>
+            <p class="text-white/90 text-lg max-w-2xl mx-auto mb-10 fade-in">
+                Vraag vandaag nog een vrijblijvende offerte aan. Wij komen gratis langs door heel Nederland en België — zonder extra kosten.
+            </p>
+            <div class="fade-in">
+                <a href="contact.html" class="inline-block bg-white font-bold py-4 px-10 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg" style="color:#1a1a1a;">
+                    GRATIS OFFERTE AANVRAGEN
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projecten Section -->
+    <section id="projecten" class="py-20 bg-gg-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-gg-orange font-semibold uppercase tracking-wider text-sm">Ons Werk</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gg-green mt-3 mb-4">
+                    Afgeronde Projecten
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Bekijk de resultaten van onze recente opdrachten
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in">
+                    <img src="../images/before-after-bestrating.jpg" alt="Bestrating project" class="w-full h-72 object-cover" loading="lazy">
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Bestrating</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Terras & Oprit</h3>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in">
+                    <img src="../images/before-after-voortuin.jpg" alt="Voortuin project" class="w-full h-72 object-cover" loading="lazy">
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Tuinaanleg</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Voortuin Transformatie</h3>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl overflow-hidden shadow-lg fade-in">
+                    <div class="relative w-full h-72 flex">
+                        <div class="w-1/2 h-full relative">
+                            <img src="../images/before-after-haag-voor.jpg" alt="Haag voor snoeien" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 left-4 bg-black/75 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Voor</span>
+                        </div>
+                        <div class="w-1/2 h-full relative">
+                            <img src="../images/before-after-bestrating.jpg" alt="Haag na snoeien" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-4 right-4 text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider bg-gg-green">Na</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <span class="text-gg-orange text-sm font-semibold uppercase">Onderhoud</span>
+                        <h3 class="text-xl font-bold text-gg-green mt-2">Haag Snoeien</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <a href="projecten.html" class="btn-secondary text-lg">Bekijk Alle Projecten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-gg-orange font-semibold uppercase tracking-wider text-sm">Contact</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gg-green mt-3 mb-4">
+                    Vrijblijvende Offerte
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Wij komen vrijblijvend langs om uw tuin te bekijken. Geen extra kosten, zodat wij een passende offerte kunnen opstellen.
+                </p>
+            </div>
+            <div class="max-w-2xl mx-auto fade-in">
+                <form class="bg-gg-gray rounded-2xl p-8 md:p-12 shadow-lg" id="contact-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Naam *</label>
+                            <input type="text" name="naam" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white" placeholder="Uw naam">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Telefoon</label>
+                            <input type="tel" name="telefoon" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white" placeholder="06 — — — —">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white" placeholder="uw@email.nl">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Gewenste Dienst</label>
+                        <select name="dienst" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all bg-white">
+                            <option>Tuinaanleg</option>
+                            <option>Bestrating</option>
+                            <option>Periodiek Onderhoud</option>
+                            <option>Snoeien / Heggen</option>
+                            <option>Onkruidbestrijding</option>
+                            <option>Anders / Ik weet het nog niet</option>
+                        </select>
+                    </div>
+                    <div class="mb-8">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Bericht *</label>
+                        <textarea name="bericht" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none transition-all resize-none bg-white" placeholder="Beschrijf uw wensen..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-4 text-lg">Offerte Aanvragen</button>
+                </form>
+                <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg text-sm font-medium"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gg-green-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" style="height:40px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1);">
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        Uw tuin, onze zorg. Altijd perfect! Professioneel tuinwerk door heel Nederland en België.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Snelle Links</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li><a href="index.html" class="hover:text-gg-orange transition-colors">Home</a></li>
+                        <li><a href="diensten.html" class="hover:text-gg-orange transition-colors">Diensten</a></li>
+                        <li><a href="projecten.html" class="hover:text-gg-orange transition-colors">Projecten</a></li>
+                        <li><a href="contact.html" class="hover:text-gg-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-white/80">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <a href="tel:0685350145" class="hover:text-gg-orange transition-colors">06 8535 0145</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <a href="mailto:info@tuinperfect.nl" class="hover:text-gg-orange transition-colors">info@tuinperfect.nl</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-gg-orange flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Nederland &amp; België
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm">
+                <p>&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        // Before/After Slider
+        const slider = document.getElementById('ba-slider');
+        const before = document.getElementById('ba-before');
+        const beforeInner = document.getElementById('ba-before-inner');
+        const handle = document.getElementById('ba-handle');
+        const divider = document.getElementById('ba-divider');
+        const hint = document.getElementById('ba-hint');
+        let isDragging = false, hasInteracted = false;
+
+        const updateBeforeInnerSize = () => {
+            const rect = slider.getBoundingClientRect();
+            beforeInner.style.width = rect.width + 'px';
+            beforeInner.style.height = rect.height + 'px';
+        };
+        window.addEventListener('resize', updateBeforeInnerSize);
+        window.addEventListener('orientationchange', () => setTimeout(updateBeforeInnerSize, 100));
+        updateBeforeInnerSize();
+
+        const updateSlider = (x) => {
+            const rect = slider.getBoundingClientRect();
+            let pct = Math.max(5, Math.min(95, ((x - rect.left) / rect.width) * 100));
+            before.style.width = pct + '%';
+            handle.style.left = pct + '%';
+            divider.style.left = pct + '%';
+        };
+        const startDrag = (e) => { isDragging = true; hasInteracted = true; slider.classList.add('dragging'); if (hint) hint.style.opacity = '0'; if (e.type === 'mousedown') e.preventDefault(); };
+        const endDrag = () => { if (isDragging) { isDragging = false; slider.classList.remove('dragging'); } };
+        handle.addEventListener('mousedown', startDrag);
+        divider.addEventListener('mousedown', startDrag);
+        document.addEventListener('mouseup', endDrag);
+        document.addEventListener('mousemove', (e) => { if (isDragging) updateSlider(e.clientX); });
+        handle.addEventListener('touchstart', startDrag, { passive: false });
+        divider.addEventListener('touchstart', startDrag, { passive: false });
+        document.addEventListener('touchend', endDrag);
+        slider.addEventListener('touchmove', (e) => { if (isDragging) { e.preventDefault(); updateSlider(e.touches[0].clientX); } }, { passive: false });
+        slider.addEventListener('click', (e) => {
+            if (handle.contains(e.target) || divider.contains(e.target)) return;
+            hasInteracted = true; if (hint) hint.style.opacity = '0';
+            slider.classList.remove('dragging');
+            const pct = ((e.clientX - slider.getBoundingClientRect().left) / slider.getBoundingClientRect().width) * 100;
+            before.style.width = Math.max(5, Math.min(95, pct)) + '%';
+            handle.style.left = Math.max(5, Math.min(95, pct)) + '%';
+            divider.style.left = Math.max(5, Math.min(95, pct)) + '%';
+        });
+        if ('ResizeObserver' in window) new ResizeObserver(updateBeforeInnerSize).observe(slider);
+
+        // Auto-animate
+        setTimeout(() => {
+            if (!hasInteracted && hint) {
+                before.style.width = '45%'; handle.style.left = '45%'; divider.style.left = '45%';
+                setTimeout(() => {
+                    before.style.width = '55%'; handle.style.left = '55%'; divider.style.left = '55%';
+                    setTimeout(() => { before.style.width = '50%'; handle.style.left = '50%'; divider.style.left = '50%'; }, 400);
+                }, 400);
+            }
+        }, 2000);
+
+        // Fade-in scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const feedback = document.getElementById('form-feedback');
+            feedback.textContent = 'Bedankt! Wij nemen binnen 24 uur contact met u op.';
+            feedback.className = 'mt-4 p-4 rounded-lg text-sm font-medium bg-green-100 text-green-700';
+            e.target.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

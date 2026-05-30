@@ -1,0 +1,142 @@
+/*
+  Tuin Perfect V3 — Kleur-override op Groen Glans Tailwind CSS
+  GG-groen  (#70952D / #5A7A24 / #8AB83A)  →  TP-donker  (#1a1a1a / #121414 / #2a2a2a)
+  GG-oranje (#F3901A / #D97A0F)             →  TP-geel    (#FCD202 / #e0b800)
+  GG-gray   (#f8f9fa)                        →  behouden (lichte achtergrond)
+*/
+
+/* =====================================================
+   NAVIGATIE
+   ===================================================== */
+.nav-link { color: #1a1a1a !important; }
+.nav-link:hover, .nav-link.text-gg-orange { color: #FCD202 !important; }
+.nav-link::after { background: #FCD202 !important; }
+
+/* Actieve nav kleur */
+.text-gg-orange { color: #FCD202 !important; }
+.text-gg-green  { color: #1a1a1a !important; }
+
+/* =====================================================
+   KNOPPEN
+   ===================================================== */
+.btn-primary {
+  background: #1a1a1a !important;
+  color: #FCD202 !important;
+  border-radius: 8px !important;
+}
+.btn-primary:hover {
+  background: #000 !important;
+  color: #FCD202 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+}
+.btn-secondary {
+  background: #FCD202 !important;
+  color: #000 !important;
+}
+.btn-secondary:hover {
+  background: #e0b800 !important;
+  color: #000 !important;
+  box-shadow: 0 8px 20px rgba(252,210,2,0.35) !important;
+}
+
+/* =====================================================
+   HERO & SECTION TITELS
+   ===================================================== */
+h1.text-gg-green,
+h2.text-gg-green,
+h3.text-gg-green,
+h4.text-gg-green {
+  color: #1a1a1a !important;
+}
+
+/* =====================================================
+   SERVICE CARDS
+   ===================================================== */
+.service-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+}
+
+/* Icoon cirkels: groen -> geel tint */
+.bg-gg-green\/10 { background-color: rgba(252,210,2,0.12) !important; }
+.bg-gg-orange\/10 { background-color: rgba(252,210,2,0.12) !important; }
+
+/* =====================================================
+   CTA SECTIE (was bg-gg-green)
+   ===================================================== */
+.bg-gg-green {
+  background-color: #1a1a1a !important;
+}
+/* De CTA knop (wit op groen -> geel op zwart) */
+.bg-gg-green .inline-block.bg-white {
+  background: #FCD202 !important;
+  color: #000 !important;
+}
+.bg-gg-green .inline-block.bg-white:hover {
+  background: #e0b800 !important;
+}
+
+/* =====================================================
+   PROJECT KAARTEN — "Na" label
+   ===================================================== */
+.bg-gg-green.text-white { background-color: #1a1a1a !important; }
+
+/* =====================================================
+   BEFORE/AFTER SLIDER HANDLE ACCENT
+   ===================================================== */
+.ba-handle {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 4px rgba(252,210,2,0.35) !important;
+}
+.ba-handle:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 6px rgba(252,210,2,0.45) !important;
+}
+.ba-handle-arrows { color: #FCD202 !important; }
+.ba-hint {
+  background: rgba(252,210,2,0.95) !important;
+  color: #000 !important;
+  box-shadow: 0 4px 15px rgba(252,210,2,0.4) !important;
+}
+
+/* =====================================================
+   CHECK ICONS (diensten pagina)
+   ===================================================== */
+.check-icon { background: #1a1a1a !important; }
+
+/* =====================================================
+   FILTER KNOPPEN (projecten pagina)
+   ===================================================== */
+.filter-btn.active {
+  background: #1a1a1a !important;
+  color: #FCD202 !important;
+  border-color: #1a1a1a !important;
+}
+.filter-btn:not(.active) {
+  color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+}
+.filter-btn:not(.active):hover {
+  background: #1a1a1a !important;
+  color: #FCD202 !important;
+}
+
+/* =====================================================
+   CONTACT KAARTEN — focus border
+   ===================================================== */
+input:focus, textarea:focus, select:focus {
+  border-color: #1a1a1a !important;
+  --tw-ring-color: rgba(26,26,26,0.15) !important;
+}
+
+/* FAQ pijltjes */
+.faq-question svg { color: #1a1a1a !important; }
+
+/* =====================================================
+   FOOTER (was bg-gg-green-dark)
+   ===================================================== */
+.bg-gg-green-dark { background-color: #0d0d0d !important; }
+footer .hover\:text-gg-orange:hover { color: #FCD202 !important; }
+footer svg.text-gg-orange { color: #FCD202 !important; }
+
+/* =====================================================
+   PROJECTEN — "Na" badge kleur
+   ===================================================== */
+span.bg-gg-green { background-color: #1a1a1a !important; }
