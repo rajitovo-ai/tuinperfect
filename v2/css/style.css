@@ -1,12 +1,12 @@
 /* ============================================================
-   TUIN PERFECT V2 — Pure Black + Felle Oranje (Logo Oranje)
-   Puur zwart (#000000) + felle oranje (#FF6B00) — hard & grafisch
+   TUIN PERFECT V2 — Pure Black + Logo Geel (#FCD202)
+   Puur zwart (#000000) + logo-geel (#FCD202) — hard & grafisch
    ============================================================ */
 
 :root {
-  --color-primary: #FF6B00;
-  --color-primary-dark: #CC5500;
-  --color-primary-light: #FF8C33;
+  --color-primary: #FCD202;
+  --color-primary-dark: #e0b800;
+  --color-primary-light: #fde040;
   --color-bg: #000000;
   --color-bg-card: #111111;
   --color-bg-card-high: #1a1a1a;
@@ -90,7 +90,7 @@ ul { list-style: none; }
 .halftone-pattern {
   background-image: radial-gradient(circle, var(--color-primary) 1px, transparent 1px);
   background-size: 14px 14px;
-  opacity: 0.05;
+  opacity: 0.1;
   pointer-events: none;
 }
 .sticker-shadow { filter: drop-shadow(6px 6px 0px var(--color-primary)); }
@@ -107,7 +107,7 @@ ul { list-style: none; }
 .btn-primary {
   display: inline-block;
   background-color: var(--color-primary);
-  color: #000000;
+  color: #000;
   font-family: 'Work Sans', sans-serif;
   font-weight: 900;
   font-size: 13px;
@@ -140,7 +140,7 @@ ul { list-style: none; }
 }
 .btn-outline:hover {
   background-color: var(--color-primary);
-  color: #000;
+  color: #000000;
 }
 
 /* ---- BADGE ---- */
