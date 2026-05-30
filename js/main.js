@@ -204,4 +204,14 @@ function initComparisonSlider() {
 }
 
 // Initialize comparison slider on load
-document.addEventListener('DOMContentLoaded', initComparisonSlider);
+document.addEventListener('DOMContentLoaded', () => {
+  initComparisonSlider();
+  // Initialize IntersectionObserver for fade-in elements
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+      else entry.target.classList.remove('visible');
+    });
+  });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+});
