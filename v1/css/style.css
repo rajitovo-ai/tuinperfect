@@ -53,7 +53,7 @@ ul { list-style: none; }
 
 /* ---- TYPOGRAPHY ---- */
 .section-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 48px);
   text-transform: uppercase;
@@ -75,7 +75,7 @@ ul { list-style: none; }
 .section-title span { color: var(--color-primary); }
 .section-label {
   display: inline-block;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -106,7 +106,7 @@ ul { list-style: none; }
   display: inline-block;
   background-color: var(--color-primary);
   color: #000000;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -126,7 +126,7 @@ ul { list-style: none; }
   display: inline-block;
   background-color: transparent;
   color: var(--color-primary);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -147,7 +147,7 @@ ul { list-style: none; }
   background-color: var(--color-primary);
   color: #000000;
   padding: 8px 16px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 13px;
   text-transform: uppercase;
@@ -180,7 +180,7 @@ ul { list-style: none; }
 .nav-logo img { height: 44px; width: auto; }
 .nav-links { display: none; gap: var(--spacing-md); align-items: center; }
 .nav-links a {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ ul { list-style: none; }
 }
 .mobile-menu.active { display: flex; }
 .mobile-menu a {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 28px;
   text-transform: uppercase;
@@ -283,7 +283,7 @@ ul { list-style: none; }
   max-width: 720px;
 }
 .hero-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: clamp(40px, 7vw, 80px);
   line-height: 1.05;
@@ -327,14 +327,14 @@ ul { list-style: none; }
 }
 .stat-icon { font-size: 28px; color: var(--color-primary); }
 .stat-number {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 22px;
   line-height: 1;
   color: var(--color-primary);
 }
 .stat-label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -395,7 +395,7 @@ ul { list-style: none; }
   color: var(--color-primary);
 }
 .service-card h3 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 22px;
   text-transform: uppercase;
@@ -406,7 +406,7 @@ ul { list-style: none; }
 .service-card ul { display: flex; flex-direction: column; gap: 8px; }
 .service-card li {
   display: flex; align-items: center; gap: 8px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -458,11 +458,11 @@ ul { list-style: none; }
   color: #000;
   width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900; font-size: 24px; font-style: italic;
 }
 .ba-info h3 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700; font-size: 20px;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -473,7 +473,7 @@ ul { list-style: none; }
 .ba-tag {
   background-color: var(--color-bg-highest);
   padding: 4px 12px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -567,7 +567,7 @@ ul { list-style: none; }
   position: absolute;
   top: 16px;
   padding: 6px 14px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -596,7 +596,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 22px;
   text-transform: uppercase;
@@ -660,14 +660,14 @@ ul { list-style: none; }
   border-left: 4px solid var(--color-primary);
 }
 .cta-phone-box a {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 26px;
   color: #fff;
 }
 .cta-phone-box a:hover { color: var(--color-primary); }
 .cta-phone-label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -679,7 +679,7 @@ ul { list-style: none; }
 /* Form */
 .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
 .form-group label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -713,7 +713,7 @@ ul { list-style: none; }
 .form-feedback {
   display: none;
   padding: 14px 20px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -738,7 +738,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -775,7 +775,7 @@ ul { list-style: none; }
 .dienst-card-img-wrap { overflow: hidden; }
 .dienst-card-body { padding: 32px; }
 .dienst-card-body h3 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
@@ -810,7 +810,7 @@ ul { list-style: none; }
 }
 .filter-btn {
   padding: 8px 20px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -863,7 +863,7 @@ ul { list-style: none; }
 }
 .project-item:hover .project-info { transform: translateY(0); }
 .project-tag {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -871,7 +871,7 @@ ul { list-style: none; }
   margin-bottom: 4px;
 }
 .project-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: italic;
@@ -889,7 +889,7 @@ ul { list-style: none; }
   padding: var(--spacing-lg);
 }
 .contact-info-card h3 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 22px;
   text-transform: uppercase;
@@ -899,7 +899,7 @@ ul { list-style: none; }
 }
 .contact-detail { margin-bottom: 24px; }
 .contact-detail .label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -907,7 +907,7 @@ ul { list-style: none; }
   margin-bottom: 4px;
 }
 .contact-detail a, .contact-detail p {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: 22px;
   color: #fff;
@@ -939,7 +939,7 @@ ul { list-style: none; }
   margin-bottom: var(--spacing-lg);
 }
 .footer-brand {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 20px;
   color: var(--color-primary);
@@ -950,7 +950,7 @@ ul { list-style: none; }
 .footer-brand img { height: 36px; width: auto; margin-bottom: 12px; }
 .footer-desc { color: var(--color-text-muted); font-size: 14px; line-height: 1.7; max-width: 280px; }
 .footer-col h4 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -984,7 +984,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1052,7 +1052,7 @@ ul { list-style: none; }
   box-shadow: 0 8px 40px rgba(0,0,0,0.8);
 }
 .variant-selector span {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -1064,7 +1064,7 @@ ul { list-style: none; }
   background: transparent;
   border: 2px solid var(--color-border);
   color: var(--color-text-muted);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -1206,7 +1206,7 @@ body.page-leaving {
   background: var(--color-primary);
   color: #000;
   padding: 8px 20px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 13px;
   text-transform: uppercase;
@@ -1216,7 +1216,7 @@ body.page-leaving {
 }
 .badge-a span { display: inline-block; transform: skewX(8deg); }
 .hero-title-a {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: clamp(38px, 6vw, 72px);
   line-height: 0.95;
@@ -1237,7 +1237,7 @@ body.page-leaving {
   gap: 8px;
   background: transparent;
   color: #fff;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 17px;
   text-transform: uppercase;
@@ -1259,7 +1259,7 @@ body.page-leaving {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -1314,7 +1314,7 @@ body.page-leaving {
   border: 1px solid rgba(252,210,2,0.3);
   color: var(--color-primary);
   padding: 8px 16px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -1323,7 +1323,7 @@ body.page-leaving {
   border-radius: 2px;
 }
 .hero-title-b {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 5vw, 64px);
   line-height: 1.1;
@@ -1345,14 +1345,14 @@ body.page-leaving {
 }
 .glass-stat { text-align: center; flex: 1; }
 .glass-stat-num {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 28px;
   color: var(--color-primary);
   line-height: 1;
 }
 .glass-stat-label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1392,7 +1392,7 @@ body.page-leaving {
   backdrop-filter: blur(8px);
 }
 .hero-title-c {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: clamp(40px, 7vw, 78px);
   line-height: 1.0;
@@ -1415,7 +1415,7 @@ body.page-leaving {
   gap: 10px;
   background: #25D366;
   color: #fff;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
@@ -1463,7 +1463,7 @@ body.page-leaving {
   top: 16px; left: 16px;
   background: var(--color-primary);
   color: #000;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 22px;
   font-style: italic;
@@ -1475,7 +1475,7 @@ body.page-leaving {
   top: 16px; right: 16px;
   background: #000;
   color: var(--color-primary);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1490,7 +1490,7 @@ body.page-leaving {
 }
 .svc-photo-card:hover .svc-photo-body { background: var(--color-bg-card-high); }
 .svc-photo-body h3 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
@@ -1499,7 +1499,7 @@ body.page-leaving {
 }
 .svc-photo-body p { color: var(--color-text-muted); font-size: 14px; margin-bottom: 14px; }
 .svc-link {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -1543,7 +1543,7 @@ body.page-leaving {
   background: var(--color-bg-card);
 }
 .mag-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: clamp(24px, 3vw, 36px);
   text-transform: uppercase;
@@ -1594,7 +1594,7 @@ body.page-leaving {
 }
 .svc-list-item:hover { background: rgba(252,210,2,0.02); }
 .svc-list-num {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 32px;
   font-style: italic;
@@ -1606,7 +1606,7 @@ body.page-leaving {
 }
 .svc-list-item:hover .svc-list-num { opacity: 1; }
 .svc-list-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
@@ -1620,7 +1620,7 @@ body.page-leaving {
   gap: 8px 20px;
 }
 .svc-list-checks span {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -1629,7 +1629,7 @@ body.page-leaving {
 .svc-list-badge {
   display: inline-block;
   padding: 3px 10px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1637,7 +1637,7 @@ body.page-leaving {
 }
 .svc-list-popular { background: var(--color-primary); color: #000; }
 .svc-list-arrow {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 24px;
   color: var(--color-primary);
@@ -1690,19 +1690,19 @@ body.page-leaving {
   color: #000;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 18px;
   flex-shrink: 0;
 }
 .review-a-name {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #fff;
 }
 .review-a-service {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1717,7 +1717,7 @@ body.page-leaving {
   margin-top: 40px;
   padding-top: 32px;
   border-top: 1px solid var(--color-border);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: var(--color-text-muted);
@@ -1736,7 +1736,7 @@ body.page-leaving {
   justify-content: center;
 }
 .reviews-b-big {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 64px;
   color: var(--color-primary);
@@ -1762,13 +1762,13 @@ body.page-leaving {
   color: #000;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 16px;
   flex-shrink: 0;
 }
 .review-b-name {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #fff;
@@ -1777,7 +1777,7 @@ body.page-leaving {
 .review-b-stars { color: var(--color-primary); font-size: 14px; letter-spacing: 1px; margin-left: auto; }
 .review-card-b p { color: var(--color-text-muted); font-size: 14px; line-height: 1.6; font-style: italic; margin-bottom: 12px; }
 .review-b-service {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1812,13 +1812,13 @@ body.page-leaving {
   color: #000;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 14px;
   flex-shrink: 0;
 }
 .chat-name {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: #fff;
@@ -1827,7 +1827,7 @@ body.page-leaving {
 .chat-stars { color: var(--color-primary); font-size: 13px; letter-spacing: 1px; }
 .chat-msg { color: rgba(226,226,226,0.85); font-size: 15px; line-height: 1.6; font-style: italic; margin-bottom: 12px; }
 .chat-service {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -1855,7 +1855,7 @@ body.page-leaving {
   display: inline-block;
   background: #000;
   color: var(--color-primary);
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -1864,7 +1864,7 @@ body.page-leaving {
   margin-bottom: 20px;
 }
 .cta-a-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: clamp(36px, 6vw, 72px);
   text-transform: uppercase;
@@ -1880,7 +1880,7 @@ body.page-leaving {
   gap: 16px;
 }
 .cta-a-phone-num {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 36px;
   color: #000;
@@ -1889,7 +1889,7 @@ body.page-leaving {
 }
 .cta-a-phone-num:hover { color: rgba(0,0,0,0.7); }
 .cta-a-phone-label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -1951,7 +1951,7 @@ body.page-leaving {
   background: rgba(252,210,2,0.08);
   border: 1px solid rgba(252,210,2,0.2);
   padding: 10px 16px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
@@ -2000,7 +2000,7 @@ body.page-leaving {
 .cta-c-option-phone { background: var(--color-primary); }
 .cta-c-option-icon svg { width: 22px; height: 22px; }
 .cta-c-option-label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -2008,7 +2008,7 @@ body.page-leaving {
   color: var(--color-text-muted);
 }
 .cta-c-option-value {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: 20px;
   color: #fff;
@@ -2044,7 +2044,7 @@ body.page-leaving {
   border: 1px solid rgba(252,210,2,0.2);
   padding: 8px 16px;
   margin-top: 16px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -2088,7 +2088,7 @@ body.page-leaving {
   gap: 32px;
 }
 .proj-hero-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: clamp(36px, 6vw, 72px);
   text-transform: uppercase;
@@ -2112,7 +2112,7 @@ body.page-leaving {
   flex-wrap: wrap;
 }
 .proj-hero-stat {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   color: rgba(255,255,255,0.7);
 }
@@ -2146,7 +2146,7 @@ body.page-leaving {
   margin-top: 12px;
 }
 .proj-slider-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: #fff;
@@ -2208,7 +2208,7 @@ body.page-leaving {
   display: inline-block;
   background: var(--color-primary);
   color: #000;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 10px;
   text-transform: uppercase;
@@ -2217,7 +2217,7 @@ body.page-leaving {
   margin-bottom: 6px;
 }
 .project-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 15px;
   color: #fff;
@@ -2255,7 +2255,7 @@ body.page-leaving {
   flex-wrap: wrap;
 }
 .proj-cta-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 900;
   font-size: clamp(28px, 4vw, 52px);
   text-transform: uppercase;
