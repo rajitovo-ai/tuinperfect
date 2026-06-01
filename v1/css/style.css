@@ -1228,7 +1228,7 @@ body.page-leaving {
 }
 .hero-accent-a {
   color: var(--color-primary);
-  display: block;
+  display: inline;
   -webkit-text-stroke: 2px var(--color-primary);
 }
 .btn-outline-a {
