@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projecten | Tuin Perfect — Bekijk Ons Werk</title>
   <meta name="description" content="Bekijk de uitgevoerde tuinprojecten van Tuin Perfect: bestrating, tuinaanleg, snoeien en meer. Echte resultaten, tevreden klanten.">
-  <link rel="icon" href="../logo/favicon.png" type="image/png">
+  <link rel="icon" href="logo/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-container">
       <a href="index.html" class="nav-logo">
-        <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect">
+        <img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect">
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -47,235 +47,254 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="page-hero-halftone halftone-pattern"></div>
-    <div class="container page-hero-content">
-      <div class="breadcrumb">
+  <!-- PAGE HERO — foto achtergrond met overlay -->
+  <section class="proj-hero">
+    <div class="proj-hero-bg">
+      <img src="images/before-after-voortuin.jpg" alt="Tuin Perfect projecten" fetchpriority="high">
+    </div>
+    <div class="proj-hero-overlay"></div>
+    <div class="hero-halftone halftone-pattern"></div>
+    <div class="container proj-hero-content">
+      <div class="breadcrumb fade-in">
         <a href="index.html">Home</a>
         <span>›</span>
         <span>Projecten</span>
       </div>
-      <span class="section-label">Ons Werk</span>
-      <h1 class="section-title" style="font-size: clamp(36px, 5vw, 64px);">Afgeronde <span>Projecten</span></h1>
-      <p style="margin-top: 20px; font-size: 18px; color: var(--color-text-muted); max-width: 560px;">Bekijk resultaten van echte klanten. Van kleine klusjes tot complete tuintransformaties — allemaal met hetzelfde kenmerk: altijd perfect.</p>
+      <div class="fade-in">
+        <span class="section-label">Ons Werk</span>
+        <h1 class="proj-hero-title">Afgeronde <span>Projecten</span></h1>
+        <p class="proj-hero-sub">Echte resultaten van echte klanten. Van kleine klusjes tot complete tuintransformaties — allemaal met hetzelfde kenmerk: altijd perfect.</p>
+      </div>
+      <div class="proj-hero-stats fade-in">
+        <div class="proj-hero-stat"><span>15+</span> Projecten per maand</div>
+        <div class="proj-hero-stat-div"></div>
+        <div class="proj-hero-stat"><span>100%</span> Tevredenheid</div>
+        <div class="proj-hero-stat-div"></div>
+        <div class="proj-hero-stat"><span>NL &amp; BE</span> Werkgebied</div>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- VOOR/NA SLIDERS — correcte voor/na beelden -->
+  <section class="projecten-section" style="padding-bottom:0;">
+    <div class="container">
+      <div class="section-header fade-in" style="margin-bottom:40px;">
+        <span class="section-label">Interactief</span>
+        <h2 class="section-title">Voor &amp; <span>Na</span></h2>
+      </div>
+      <div class="proj-slider-grid">
+
+        <div class="proj-slider-item fade-in">
+          <div class="ba-slider-wrap">
+            <img src="images/project-donkere-tegels-na.jpg" alt="Na: Donkere tegels voortuin">
+            <div class="ba-slider-before">
+              <img src="images/project-muurtjes.jpg" alt="Voor: Verwaarloosde tuin" style="filter:grayscale(60%);">
+            </div>
+            <div class="ba-label-tag ba-label-before">Voor</div>
+            <div class="ba-label-tag ba-label-after">Na</div>
+            <div class="ba-slider-line"></div>
+            <div class="ba-slider-handle">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3M16 9l4 3-4 3"/></svg>
+            </div>
+          </div>
+          <div class="proj-slider-caption">
+            <span class="section-label" style="margin-bottom:4px;">Tuinaanleg &amp; Bestrating</span>
+            <div class="proj-slider-title">Voortuin — Donkere Tegels &amp; Witte Kiezels</div>
+          </div>
+        </div>
+
+        <div class="proj-slider-item fade-in">
+          <div class="ba-slider-wrap">
+            <img src="images/project-bamboe-schutting-na.jpg" alt="Na: Bamboe schutting met kunstgras">
+            <div class="ba-slider-before">
+              <img src="images/before-after-gazon-voor.jpg" alt="Voor: Achtertuin met onkruid" style="filter:grayscale(60%);">
+            </div>
+            <div class="ba-label-tag ba-label-before">Voor</div>
+            <div class="ba-label-tag ba-label-after">Na</div>
+            <div class="ba-slider-line"></div>
+            <div class="ba-slider-handle">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3M16 9l4 3-4 3"/></svg>
+            </div>
+          </div>
+          <div class="proj-slider-caption">
+            <span class="section-label" style="margin-bottom:4px;">Complete Tuinaanleg</span>
+            <div class="proj-slider-title">Achtertuin — Kunstgras &amp; Bamboe Schutting</div>
+          </div>
+        </div>
+
+        <div class="proj-slider-item fade-in">
+          <div class="ba-slider-wrap">
+            <img src="images/project-leisteen-voortuin-na.jpg" alt="Na: Leisteen muurtjes voortuin">
+            <div class="ba-slider-before">
+              <img src="images/before-after-oprit-voor.jpg" alt="Voor: Uitgegraven achtertuin" style="filter:grayscale(60%);">
+            </div>
+            <div class="ba-label-tag ba-label-before">Voor</div>
+            <div class="ba-label-tag ba-label-after">Na</div>
+            <div class="ba-slider-line"></div>
+            <div class="ba-slider-handle">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3M16 9l4 3-4 3"/></svg>
+            </div>
+          </div>
+          <div class="proj-slider-caption">
+            <span class="section-label" style="margin-bottom:4px;">Bestrating</span>
+            <div class="proj-slider-title">Voortuin — Leisteen Muurtjes &amp; Klinkers</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT GALERIJ -->
   <section class="projecten-section">
     <div class="container">
-
-      <!-- Filter -->
-      <div class="filter-bar fade-in">
-        <button class="filter-btn active" data-filter="all">Alles</button>
-        <button class="filter-btn" data-filter="bestrating">Bestrating</button>
-        <button class="filter-btn" data-filter="tuinaanleg">Tuinaanleg</button>
-        <button class="filter-btn" data-filter="snoeien">Snoeien</button>
-        <button class="filter-btn" data-filter="onderhoud">Onderhoud</button>
-      </div>
-
-      <!-- Voor/Na Slider showcase -->
-      <div style="margin-bottom: 48px;" class="fade-in">
-        <span class="section-label">Interactief</span>
-        <h2 class="section-title" style="margin-bottom: 32px;">Voor &amp; <span>Na</span></h2>
-        <div style="display:grid; grid-template-columns:1fr; gap:24px;" id="slider-grid">
-          <div>
-            <div class="ba-slider-wrap" style="border-radius:2px;">
-              <img src="../images/before-after-voortuin.jpg" alt="Na: Voortuin transformatie" style="width:100%; height:480px; object-fit:cover;">
-              <div class="comparison-before ba-slider-before">
-                <img src="../images/before-after-voortuin.jpg" alt="Voor: Voortuin" style="filter:grayscale(80%); height:480px; width:auto; min-width:100%; object-fit:cover; position:absolute; top:0; left:0;">
-              </div>
-              <div class="ba-label-tag ba-label-before">Voor</div>
-              <div class="ba-label-tag ba-label-after">Na</div>
-              <div class="ba-slider-line"></div>
-              <div class="ba-slider-handle">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3M16 9l4 3-4 3"/>
-                </svg>
-              </div>
-            </div>
-            <div style="padding: 16px 0 0; border-left: 4px solid var(--color-primary); padding-left: 16px; margin-top: 12px;">
-              <span class="project-tag">Tuinaanleg & Bestrating</span>
-              <div class="project-title">Voortuin Transformatie — Kiezels & Tegels</div>
-            </div>
-          </div>
-          <div>
-            <div class="ba-slider-wrap" style="border-radius:2px;">
-              <img src="../images/before-after-bestrating.jpg" alt="Na: Complete tuinaanleg" style="width:100%; height:480px; object-fit:cover;">
-              <div class="comparison-before ba-slider-before">
-                <img src="../images/before-after-bestrating.jpg" alt="Voor: Complete tuinaanleg" style="filter:grayscale(80%); height:480px; width:auto; min-width:100%; object-fit:cover; position:absolute; top:0; left:0;">
-              </div>
-              <div class="ba-label-tag ba-label-before">Voor</div>
-              <div class="ba-label-tag ba-label-after">Na</div>
-              <div class="ba-slider-line"></div>
-              <div class="ba-slider-handle">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l-4 3 4 3M16 9l4 3-4 3"/>
-                </svg>
-              </div>
-            </div>
-            <div style="padding: 16px 0 0; border-left: 4px solid var(--color-primary); padding-left: 16px; margin-top: 12px;">
-              <span class="project-tag">Complete Tuinaanleg</span>
-              <div class="project-title">Achtertuin — Tegels, Kunstgras & Beplanting</div>
-            </div>
-          </div>
+      <div class="proj-gallery-header fade-in">
+        <div>
+          <span class="section-label">Galerij</span>
+          <h2 class="section-title">Alle <span>Projecten</span></h2>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">Alles</button>
+          <button class="filter-btn" data-filter="bestrating">Bestrating</button>
+          <button class="filter-btn" data-filter="tuinaanleg">Tuinaanleg</button>
+          <button class="filter-btn" data-filter="snoeien">Snoeien</button>
+          <button class="filter-btn" data-filter="onderhoud">Onderhoud</button>
         </div>
       </div>
 
-      <!-- Project Grid -->
-      <div>
-        <span class="section-label fade-in">Galerij</span>
-        <h2 class="section-title fade-in" style="margin-bottom: 32px;">Alle <span>Projecten</span></h2>
-        <div class="project-grid" id="projectGrid">
+      <div class="project-grid" id="projectGrid">
 
-          <div class="project-item fade-in" data-cat="tuinaanleg">
-            <img src="../images/project-grind-stapstenen.jpg" alt="Grind tuin aanleg">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Tuinaanleg</div>
-              <div class="project-title">Grind Tuin</div>
-            </div>
+        <div class="project-item fade-in" data-cat="bestrating">
+          <img src="images/before-after-keramisch.jpg" alt="Keramische oprit muurtjes">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Bestrating</div>
+            <div class="project-title">Donkere Keramische Tegels</div>
           </div>
-
-          <div class="project-item fade-in" data-cat="bestrating">
-            <img src="../images/before-after-tuin-na.jpg" alt="Donkere keramische tegels">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Bestrating</div>
-              <div class="project-title">Donkere Keramische Tegels</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="tuinaanleg">
-            <img src="../images/project-tegels-groen-na.jpg" alt="Tegels met groene beplanting">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Tuinaanleg</div>
-              <div class="project-title">Tegels met Beplanting</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="tuinaanleg">
-            <img src="../images/dienst-schuttingen.jpg" alt="Bamboe schutting project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Tuinaanleg</div>
-              <div class="project-title">Bamboe Schutting</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="bestrating">
-            <img src="../images/project-leisteen.jpg" alt="Leisteen voortuin">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Bestrating</div>
-              <div class="project-title">Leisteen Voortuin</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="tuinaanleg">
-            <img src="../images/project-muurtjes.jpg" alt="Muurtjes en borders">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Tuinaanleg</div>
-              <div class="project-title">Muurtjes & Borders</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="onderhoud">
-            <img src="../images/dienst-tuinonderhoud.jpg" alt="Opgeruimde tuin">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Onderhoud</div>
-              <div class="project-title">Tuin Opgeruimd</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="bestrating">
-            <img src="../images/before-after-keramisch.jpg" alt="Keramische tegels project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Bestrating</div>
-              <div class="project-title">Keramische Tegels</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="snoeien">
-            <img src="../images/before-after-haag-voor.jpg" alt="Haag snoeien">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Snoeien</div>
-              <div class="project-title">Haag Snoeien</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="bestrating">
-            <img src="../images/before-after-tegels.jpg" alt="Tegels project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Bestrating</div>
-              <div class="project-title">Tegels Project</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="tuinaanleg">
-            <img src="../images/project-muurtjes.jpg" alt="Tuinaanleg project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Tuinaanleg</div>
-              <div class="project-title">Complete Achtergevel</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="bestrating">
-            <img src="../images/before-after-tuin-voor.jpg" alt="Bestrating project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Bestrating</div>
-              <div class="project-title">Oprit & Terras</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="tuinaanleg">
-            <img src="../images/before-after-oprit-voor.jpg" alt="Tuin project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Tuinaanleg</div>
-              <div class="project-title">Tuin Renovatie</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="onderhoud">
-            <img src="../images/before-after-tuin-voor.jpg" alt="Onderhoud project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Onderhoud</div>
-              <div class="project-title">Seizoenonderhoud</div>
-            </div>
-          </div>
-
-          <div class="project-item fade-in" data-cat="bestrating">
-            <img src="../images/before-after-oprit-na.jpg" alt="Bestrating project">
-            <div class="project-overlay"></div>
-            <div class="project-info">
-              <div class="project-tag">Bestrating</div>
-              <div class="project-title">Voortuin Bestrating</div>
-            </div>
-          </div>
-
         </div>
+
+        <div class="project-item fade-in" data-cat="tuinaanleg">
+          <img src="images/project-bamboe-schutting-na.jpg" alt="Bamboe schutting met kunstgras">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Tuinaanleg</div>
+            <div class="project-title">Bamboe Schutting</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="bestrating">
+          <img src="images/project-leisteen-voortuin-na.jpg" alt="Leisteen muurtjes voortuin">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Bestrating</div>
+            <div class="project-title">Leisteen Voortuin</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="tuinaanleg">
+          <img src="images/dienst-tuinaanleg.jpg" alt="Voortuin met kiezels en beplanting">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Tuinaanleg</div>
+            <div class="project-title">Voortuin — Kiezels &amp; Beplanting</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="onderhoud">
+          <img src="images/project-tuin-opgeruimd-na.jpg" alt="Tuin opgeruimd voor na">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Onderhoud</div>
+            <div class="project-title">Tuin Opgeruimd &amp; Gesnoeid</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="bestrating">
+          <img src="images/project-donkere-tegels-na.jpg" alt="Donkere tegels voortuin met kiezels">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Bestrating</div>
+            <div class="project-title">Voortuin — Donkere Tegels &amp; Kiezels</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="tuinaanleg">
+          <img src="images/before-after-bestrating.jpg" alt="Voortuin transformatie voor na">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Tuinaanleg</div>
+            <div class="project-title">Voortuin — Complete Transformatie</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="bestrating">
+          <img src="images/before-after-tegels.jpg" alt="Terras voor en na renovatie">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Bestrating</div>
+            <div class="project-title">Terras — Tegels &amp; Kunstgras</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="snoeien">
+          <img src="images/before-after-haag-voor.jpg" alt="Haag snoeien voor">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Snoeien</div>
+            <div class="project-title">Grote Haag Gesnoeid</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="bestrating">
+          <img src="images/before-after-tegels.jpg" alt="Tegels project">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Bestrating</div>
+            <div class="project-title">Terras Renovatie</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="tuinaanleg">
+          <img src="images/before-after-voortuin.jpg" alt="Voortuin voor en na">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Tuinaanleg</div>
+            <div class="project-title">Voortuin — Vlonder &amp; Kiezels</div>
+          </div>
+        </div>
+
+        <div class="project-item fade-in" data-cat="tuinaanleg">
+          <img src="images/project-grind-stapstenen.jpg" alt="Houten vlonder achtertuin">
+          <div class="project-overlay"></div>
+          <div class="project-info">
+            <div class="project-tag">Tuinaanleg</div>
+            <div class="project-title">Achtertuin — Houten Vlonder</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section style="background-color: var(--color-bg-card); padding: 60px 0; text-align:center; border-top: 4px solid var(--color-primary);">
-    <div class="container fade-in">
-      <span class="section-label">Klaar?</span>
-      <h2 class="section-title" style="margin-bottom: 16px; display:block;">Uw Tuin de <span>Volgende</span>?</h2>
-      <p style="font-size:17px; color: var(--color-text-muted); margin-bottom: 32px; max-width:500px; margin-left:auto; margin-right:auto;">Vraag vandaag nog een vrijblijvende offerte aan. Wij komen langs op locatie.</p>
-      <a href="contact.html" class="btn-primary" style="font-size:16px; padding:16px 36px;">Gratis Offerte Aanvragen</a>
+  <!-- CTA BANNER -->
+  <section class="proj-cta-banner">
+    <div class="proj-cta-bg">
+      <img src="images/before-after-bestrating.jpg" alt="">
+    </div>
+    <div class="proj-cta-overlay"></div>
+    <div class="container proj-cta-inner fade-in">
+      <div>
+        <span class="section-label">Klaar voor uw project?</span>
+        <h2 class="proj-cta-title">Uw Tuin de <span>Volgende</span>?</h2>
+        <p>Vraag vandaag nog een vrijblijvende offerte aan. Wij komen langs op locatie door heel NL &amp; België.</p>
+      </div>
+      <div class="proj-cta-actions">
+        <a href="contact.html" class="btn-primary" style="font-size:16px;padding:18px 36px;">Gratis Offerte</a>
+        <a href="https://wa.me/310685350145?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte!" class="btn-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 
@@ -305,7 +324,7 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
-            <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect" onerror="this.style.display='none'">
+            <img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" onerror="this.style.display='none'">
             Tuin Perfect
           </div>
           <p class="footer-desc">Uw tuin, onze zorg. Altijd perfect! Wij werken door heel Nederland en België.</p>
@@ -340,6 +359,13 @@
       </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/310685350145?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Tuin Perfect">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <button class="scroll-top" id="scrollTop" aria-label="Terug naar boven" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>

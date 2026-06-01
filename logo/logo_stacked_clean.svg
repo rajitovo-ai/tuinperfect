@@ -20,16 +20,7 @@
           stroke-linejoin="round"
           paint-order="stroke fill">TUIN</text>
           
-    <!-- Star Icon Nestled on the Right -->
-    <g transform="translate(195, 20)">
-      <polygon points="20,1 26,13 39,15 29,25 32,38 20,32 8,38 11,25 1,15 14,13" 
-               fill="#FCD202" 
-               stroke="#000000" 
-               stroke-width="4" 
-               stroke-linejoin="round"/>
-    </g>
-          
-    <!-- "PERFECT" Text on the Bottom (slightly larger and shifted) -->
+    <!-- "PERFECT" Text on the Bottom -->
     <text x="15" y="130" 
           font-family="'Work Sans', sans-serif" 
           font-size="52" 

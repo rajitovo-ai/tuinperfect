@@ -35,28 +35,174 @@ document.addEventListener('DOMContentLoaded', function () {
     if (navbar) navbar.classList.toggle('scrolled', window.pageYOffset > 80);
   });
 
-  // Before/After sliders
+  // ── Premium Before/After Sliders ──────────────────────────────────────────
   document.querySelectorAll('.ba-slider-wrap').forEach(function (wrap) {
     const beforeEl = wrap.querySelector('.ba-slider-before');
-    const line = wrap.querySelector('.ba-slider-line');
-    const handle = wrap.querySelector('.ba-slider-handle');
-    let dragging = false;
+    const line     = wrap.querySelector('.ba-slider-line');
+    const handle   = wrap.querySelector('.ba-slider-handle');
+    if (!beforeEl || !line || !handle) return;
 
-    function setPos(x) {
-      const rect = wrap.getBoundingClientRect();
-      let pct = ((x - rect.left) / rect.width) * 100;
-      pct = Math.max(2, Math.min(98, pct));
-      if (beforeEl) beforeEl.style.width = pct + '%';
-      if (line) line.style.left = pct + '%';
-      if (handle) handle.style.left = pct + '%';
+    // Use clip-path for crisp hardware-accelerated reveal
+    beforeEl.style.clipPath  = 'inset(0 50% 0 0)';
+    beforeEl.style.width     = '100%';
+    beforeEl.style.position  = 'absolute';
+    beforeEl.style.inset     = '0';
+    line.style.left          = '50%';
+    handle.style.left        = '50%';
+
+    let current = 50;   // current displayed %
+    let target  = 50;   // target %
+    let dragging = false;
+    let rafId    = null;
+
+    // Spring physics loop
+    function springTick() {
+      const diff = target - current;
+      if (Math.abs(diff) < 0.05) {
+        current = target;
+        applyPos(current);
+        rafId = null;
+        return;
+      }
+      current += diff * 0.14;   // spring factor — higher = snappier
+      applyPos(current);
+      rafId = requestAnimationFrame(springTick);
     }
 
-    wrap.addEventListener('mousedown', function (e) { dragging = true; setPos(e.clientX); });
-    wrap.addEventListener('touchstart', function (e) { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('mousemove', function (e) { if (dragging) setPos(e.clientX); });
-    window.addEventListener('touchmove', function (e) { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('mouseup', function () { dragging = false; });
-    window.addEventListener('touchend', function () { dragging = false; });
+    function applyPos(pct) {
+      const p = Math.max(1, Math.min(99, pct));
+      beforeEl.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)';
+      line.style.left         = p + '%';
+      handle.style.left       = p + '%';
+    }
+
+    function setTarget(x) {
+      const rect = wrap.getBoundingClientRect();
+      target = Math.max(2, Math.min(98, ((x - rect.left) / rect.width) * 100));
+      if (!rafId) rafId = requestAnimationFrame(springTick);
+    }
+
+    // Cursor feedback
+    wrap.style.cursor = 'ew-resize';
+    handle.style.cursor = 'ew-resize';
+
+    // Mouse
+    handle.addEventListener('mousedown', function (e) {
+      dragging = true;
+      e.preventDefault();
+      wrap.classList.add('ba-dragging');
+    });
+    wrap.addEventListener('mousedown', function (e) {
+      dragging = true;
+      setTarget(e.clientX);
+      wrap.classList.add('ba-dragging');
+    });
+    window.addEventListener('mousemove', function (e) {
+      if (dragging) setTarget(e.clientX);
+    });
+    window.addEventListener('mouseup', function () {
+      dragging = false;
+      wrap.classList.remove('ba-dragging');
+    });
+
+    // Touch
+    handle.addEventListener('touchstart', function (e) {
+      dragging = true;
+      wrap.classList.add('ba-dragging');
+    }, { passive: true });
+    wrap.addEventListener('touchstart', function (e) {
+      dragging = true;
+      setTarget(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchmove', function (e) {
+      if (dragging) setTarget(e.touches[0].clientX);
+    }, { passive: true });
+    window.addEventListener('touchend', function () {
+      dragging = false;
+      wrap.classList.remove('ba-dragging');
+    });
+
+    // Keyboard: arrow keys when handle is focused
+    handle.setAttribute('tabindex', '0');
+    handle.setAttribute('role', 'slider');
+    handle.setAttribute('aria-label', 'Voor/Na vergelijking schuifregelaar');
+    handle.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  { target = Math.max(2,  target - 2); if (!rafId) rafId = requestAnimationFrame(springTick); }
+      if (e.key === 'ArrowRight') { target = Math.min(98, target + 2); if (!rafId) rafId = requestAnimationFrame(springTick); }
+    });
+
+    // Intro reveal animation: sweep from 0→50 on first scroll-into-view
+    const introObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          current = 2;
+          target  = 50;
+          if (!rafId) rafId = requestAnimationFrame(springTick);
+          introObs.unobserve(wrap);
+        }
+      });
+    }, { threshold: 0.3 });
+    introObs.observe(wrap);
+
+    // Hint pulse: wiggle handle once after intro to signal interactivity
+    setTimeout(function () {
+      if (!dragging) {
+        handle.classList.add('ba-hint');
+        setTimeout(function () { handle.classList.remove('ba-hint'); }, 1200);
+      }
+    }, 1800);
+  });
+
+  // ── Teller-animatie op stats ──────────────────────────────────────────────
+  const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+  if (statNumbers.length) {
+    const countObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target   = parseFloat(el.dataset.count);
+        const suffix   = el.dataset.suffix  || '';
+        const prefix   = el.dataset.prefix  || '';
+        const decimals = parseInt(el.dataset.decimals || '0', 10);
+        const duration = 1600;
+        const start    = performance.now();
+        function tick(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // ease-out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = eased * target;
+          el.textContent = prefix + value.toFixed(decimals) + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        countObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    statNumbers.forEach(function(el) { countObs.observe(el); });
+  }
+
+  // ── Scroll-to-top knop ────────────────────────────────────────────────────
+  var scrollTopBtn = document.getElementById('scrollTop');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', function() {
+      scrollTopBtn.classList.toggle('visible', window.pageYOffset > 400);
+    }, { passive: true });
+  }
+
+  // ── Page fade-transition ──────────────────────────────────────────────────
+  document.body.classList.add('page-loaded');
+  document.querySelectorAll('a[href]').forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') ||
+        href.startsWith('tel:') || href.startsWith('mailto:') ||
+        href.startsWith('https:') || link.target === '_blank') return;
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.remove('page-loaded');
+      document.body.classList.add('page-leaving');
+      setTimeout(function() { window.location.href = href; }, 280);
+    });
   });
 
   // Contact image hover (grayscale)
