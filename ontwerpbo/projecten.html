@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecten | Tuin Perfect - Bekijk Onze Transformaties</title>
+  <meta name="description" content="Bekijk onze portfolio met tuintransformaties. Van verwaarloosde tuinen tot moderne oases. Inspiratie voor uw eigen tuinproject.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="../logo/favicon.png" type="image/png">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="projecten.html" class="active">Projecten</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="tel:0685350145" class="nav-cta">
+        <span class="material-symbols-outlined">phone</span>
+        <span>06 8535 0145</span>
+      </a>
+      <button class="menu-toggle" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="diensten.html">Diensten</a>
+    <a href="projecten.html">Projecten</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:0685350145">06 8535 0145</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="subheading">Portfolio</span>
+        <h1>Onze <em style="color: var(--accent);">Projecten</em></h1>
+        <p>Uw tuin, onze zorg. Altijd perfect! Bekijk hoe wij verwaarloosde tuinen omtoveren tot moderne buitenruimtes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="before-after-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 48px;">
+        <span class="subheading" style="color: var(--primary);">Resultaten Die Spreken</span>
+        <h2 class="heading-lg">Voor &amp; Na</h2>
+      </div>
+
+      <div class="before-after-card">
+        <div class="before-after-visual" data-comparison>
+          <img src="../images/before-after-tuin-na.jpg" alt="Na - Complete moderne loungetuin">
+          <div class="before-overlay">
+            <img src="../images/before-after-tuin-voor.jpg" alt="Voor - Overwoekerde achtertuin">
+          </div>
+          <div class="comparison-handle">
+            <div class="comparison-handle-circle">
+              <span class="material-symbols-outlined">unfold_more</span>
+            </div>
+          </div>
+          <div class="comparison-label before">Voor</div>
+          <div class="comparison-label after">Na</div>
+        </div>
+        <div class="before-after-info">
+          <h3>Achtertuin Renovatie</h3>
+          <p>"Van een verwilderde, overwoekerde wildernis tot een strakke, moderne loungetuin met een prachtige zwarte schutting, luxe klinkers en strakke borders."</p>
+          <div class="tags">
+            <span class="tag">Bestrating</span>
+            <span class="tag">Schutting</span>
+            <span class="tag">Lounge</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="before-after-card">
+        <div class="before-after-visual" data-comparison>
+          <img src="../images/before-after-gazon-na.jpg" alt="Na - Strakke tuin met gazon">
+          <div class="before-overlay">
+            <img src="../images/before-after-gazon-voor.jpg" alt="Voor - Dorre zandvlakte">
+          </div>
+          <div class="comparison-handle">
+            <div class="comparison-handle-circle">
+              <span class="material-symbols-outlined">unfold_more</span>
+            </div>
+          </div>
+          <div class="comparison-label before">Voor</div>
+          <div class="comparison-label after">Na</div>
+        </div>
+        <div class="before-after-info">
+          <h3>Gazon &amp; Borders</h3>
+          <p>"Van een dorre, onbegaanbare vlakte naar een strak, diepgroen gazon met nette witte grindborders, beplanting en een prachtige loungebank."</p>
+          <div class="tags">
+            <span class="tag">Gazon</span>
+            <span class="tag">Grindborders</span>
+            <span class="tag">Zithoek</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="before-after-card">
+        <div class="before-after-visual" data-comparison>
+          <img src="../images/before-after-oprit-na.jpg" alt="Na - Strak gelegde oprit">
+          <div class="before-overlay">
+            <img src="../images/before-after-oprit-voor.jpg" alt="Voor - Overwoekerde verzakte oprit">
+          </div>
+          <div class="comparison-handle">
+            <div class="comparison-handle-circle">
+              <span class="material-symbols-outlined">unfold_more</span>
+            </div>
+          </div>
+          <div class="comparison-label before">Voor</div>
+          <div class="comparison-label after">Na</div>
+        </div>
+        <div class="before-after-info">
+          <h3>Oprit Bestrating</h3>
+          <p>"Zwaar verzakte, met onkruid overwoekerde oprit volledig hersteld. De oprit is opnieuw geëgaliseerd, gefundeerd en voorzien van strak gelegde moderne klinkers."</p>
+          <div class="tags">
+            <span class="tag">Oprit</span>
+            <span class="tag">Bestrating</span>
+            <span class="tag">Egaliseren</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 48px;">
+        <span class="subheading" style="color: var(--primary);">Inspiratie</span>
+        <h2 class="heading-lg">Portfolio <em style="color: var(--primary);">Highlights</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item large">
+          <img src="../images/before-after-tuin-na.jpg" alt="Modern Terras & Tuin">
+          <div class="gallery-item-overlay">
+            <div>
+              <h4>Modern Terras &amp; Tuin</h4>
+              <p>Sleek design met zwarte schuttingen</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/dienst-schuttingen.jpg" alt="Zwarte houten schutting">
+          <div class="gallery-item-overlay">
+            <div><h4>Schutting &amp; Plantenbed</h4></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/project-leisteen.jpg" alt="Lichtgrijze klinkerbestrating">
+          <div class="gallery-item-overlay">
+            <div><h4>Strakke Klinkers</h4></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/project-muurtjes.jpg" alt="Buxus en gazon">
+          <div class="gallery-item-overlay">
+            <div><h4>Buxus &amp; Groen</h4></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/project-grind-stapstenen.jpg" alt="Witte grindborders">
+          <div class="gallery-item-overlay">
+            <div><h4>Grind &amp; Borders</h4></div>
+          </div>
+        </div>
+        <div class="gallery-item large">
+          <img src="../images/project-donkere-tegels-na.jpg" alt="Donkere tegels tuin">
+          <div class="gallery-item-overlay">
+            <div>
+              <h4>Keramische Tegels</h4>
+              <p>Moderne donkere tegelbestrating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 80px 0; background: var(--surface);">
+    <div class="container" style="text-align: center;">
+      <h2 class="heading-lg" style="margin-bottom: 16px;">Uw tuin, onze <em style="color: var(--primary);">Perfectie.</em></h2>
+      <p class="body-lg" style="margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">Klaar om jouw tuin perfect te maken? Wij komen graag langs voor een vrijblijvende offerte.</p>
+      <a href="contact.html" class="btn btn-dark">Start Uw Project</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect">
+          <p>Uw tuin, onze zorg. Altijd perfect!</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pagina's</h4>
+          <a href="index.html">Home</a>
+          <a href="diensten.html">Diensten</a>
+          <a href="projecten.html">Projecten</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Diensten</h4>
+          <a href="diensten.html">Tuinaanleg</a>
+          <a href="diensten.html">Bestrating</a>
+          <a href="diensten.html">Onderhoud</a>
+          <a href="diensten.html">Schuttingen</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:0685350145">06 8535 0145</a>
+          <a href="mailto:tuinperfect@gmail.com">tuinperfect@gmail.com</a>
+          <a href="contact.html">Offerte aanvragen</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tuin Perfect. Altijd Perfect!</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          <span>Beschikbaar voor Nieuwe Projecten</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

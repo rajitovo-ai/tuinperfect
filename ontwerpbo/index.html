@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuin Perfect | Wij maken jouw tuin Perfect!</title>
+  <meta name="description" content="Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, heggen snoeien, onkruid en meer. Gratis afvoeren! Door heel Nederland en België. Bel 0685350145.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="../logo/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <a href="tel:0685350145" class="nav-cta">
+        <span class="material-symbols-outlined">phone</span>
+        <span>06 8535 0145</span>
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined" style="font-size: 32px;">close</span>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="diensten.html">Diensten</a>
+    <a href="projecten.html">Projecten</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:0685350145" style="font-size: 1.25rem; margin-top: 16px;">06 8535 0145</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="subheading">Professionele Tuindiensten</span>
+          <h1 class="heading-xl">Welkom bij<br><em style="color: var(--accent);">Tuin Perfect</em></h1>
+          <p>Uw tuin, onze zorg. Van onkruid verwijderen tot complete tuinaanleg en bestrating — netjes, snel en 100% tevredenheid gegarandeerd. Door heel Nederland en België.</p>
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn btn-primary">Gratis Offerte</a>
+            <a href="projecten.html" class="btn btn-outline">Bekijk Projecten</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="../images/eigenaar-profiel.jpg" alt="De trotse eigenaar van Tuin Perfect">
+          <div class="float-badge top-right">Altijd Perfect ★</div>
+          <div class="float-badge bottom-left">100% Tevreden</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div>
+            <div class="stat-number">125+</div>
+            <div class="stat-label">Tevreden klanten</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div>
+            <div class="stat-number">24u</div>
+            <div class="stat-label">Reactietijd</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div>
+            <div class="stat-number">Gratis</div>
+            <div class="stat-label">Afvoeren</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div>
+            <div class="stat-number">NL + BE</div>
+            <div class="stat-label">Werkgebied</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section-services">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">Wat wij doen</span>
+        <h2 class="heading-lg">Onze <em style="color: var(--primary);">Expertise</em></h2>
+        <p>Van onderhoud tot complete renovatie — wij maken jouw tuin Perfect.</p>
+      </div>
+
+      <div class="services-grid">
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-tuinaanleg.jpg" alt="Tuinaanleg">
+          </div>
+          <h3>Tuinaanleg</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-bestrating.jpg" alt="Bestrating">
+          </div>
+          <h3>Bestrating</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-tuinonderhoud.jpg" alt="Tuinonderhoud">
+          </div>
+          <h3>Onderhoud</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/before-after-haag-voor.jpg" alt="Heggen snoeien">
+          </div>
+          <h3>Heggen Snoeien</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-voor-onkruid.jpg" alt="Onkruid verwijderen">
+          </div>
+          <h3>Onkruid</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-tegelreiniging.jpg" alt="Tegelreiniging">
+          </div>
+          <h3>Tegelreiniging</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-opruimen.jpg" alt="Bomen zagen">
+          </div>
+          <h3>Bomen Zagen</h3>
+        </a>
+        <a href="diensten.html" class="service-item">
+          <div class="service-thumb">
+            <img src="../images/dienst-schuttingen.jpg" alt="Schuttingen">
+          </div>
+          <h3>Schuttingen</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gratis Offerte Section -->
+  <section class="section-offerte">
+    <div class="container">
+      <div class="offerte-grid">
+        <div class="offerte-text">
+          <span class="subheading">Vrijblijvend</span>
+          <h2 class="heading-lg">Vraag een <em>gratis offerte</em> aan</h2>
+          <p>Geen uitdaging is te groot. Vertel ons over jouw tuin en wij komen langs voor een vrijblijvende offerte op locatie. Wij werken door heel Nederland en België.</p>
+          <ul class="offerte-features">
+            <li><span class="material-symbols-outlined">check_circle</span> 100% vrijblijvend</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Binnen 24 uur reactie</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Geen verborgen kosten</li>
+            <li><span class="material-symbols-outlined">check_circle</span> Altijd gratis afvoer</li>
+          </ul>
+          <a href="contact.html" class="btn btn-dark">Direct Aanvragen</a>
+        </div>
+        <div class="offerte-image">
+          <img src="../images/before-after-tuin-na.jpg" alt="Strakke moderne tuin aangelegd door Tuin Perfect">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item">
+        <span>Gratis Offerte</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Vakmanschap</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Binnen 24 Uur</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Geen Verrassingen</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Gratis Afvoer</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Nederland & België</span><span class="material-symbols-outlined star">star_rate</span>
+      </div>
+      <div class="marquee-item">
+        <span>Gratis Offerte</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Vakmanschap</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Binnen 24 Uur</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Geen Verrassingen</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Gratis Afvoer</span><span class="material-symbols-outlined star">star_rate</span>
+        <span>Nederland & België</span><span class="material-symbols-outlined star">star_rate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bel Ons Section -->
+  <section class="section-bel">
+    <div class="container">
+      <div class="bel-content">
+        <div class="bel-text">
+          <h2>Direct contact nodig?</h2>
+          <p>Wij staan voor je klaar. Bel ons of stuur een berichtje.</p>
+        </div>
+        <a href="tel:0685350145" class="bel-phone">
+          <span class="material-symbols-outlined">phone_in_talk</span>
+          <span>06 8535 0145</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../logo/logo_horizontal_clean.svg" alt="Tuin Perfect">
+          <p>Uw tuin, onze zorg. Altijd perfect! Wij werken door heel Nederland en België voor particulieren en bedrijven.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pagina's</h4>
+          <a href="index.html">Home</a>
+          <a href="diensten.html">Diensten</a>
+          <a href="projecten.html">Projecten</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Diensten</h4>
+          <a href="diensten.html">Tuinaanleg</a>
+          <a href="diensten.html">Bestrating</a>
+          <a href="diensten.html">Onderhoud</a>
+          <a href="diensten.html">Schuttingen</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:0685350145">06 8535 0145</a>
+          <a href="mailto:tuinperfect@gmail.com">tuinperfect@gmail.com</a>
+          <a href="contact.html">Offerte aanvragen</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tuin Perfect - Uw Tuin, Onze Zorg. Altijd Perfect!</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          <span>Beschikbaar voor Nieuwe Projecten</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

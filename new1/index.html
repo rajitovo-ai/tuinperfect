@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="nl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuin Perfect | Wij maken jouw tuin Perfect!</title>
+  <meta name="description" content="Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, heggen snoeien, onkruid en meer. Gratis afvoeren! Door heel Nederland en België. Bel 0685350145.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo/favicon.png">
+  <link rel="canonical" href="https://tuinperfect.nl/">
+
+  <meta property="og:title" content="Tuin Perfect | Wij maken jouw tuin Perfect!">
+  <meta property="og:description" content="Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, onkruid en meer. Gratis afvoeren!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tuinperfect.nl/">
+  <meta property="og:image" content="logo/logo2.png">
+  <meta property="og:locale" content="nl_NL">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tuin Perfect | Wij maken jouw tuin Perfect!">
+  <meta name="twitter:description" content="Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, onkruid en meer.">
+  <meta name="twitter:image" content="logo/logo2.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tuin Perfect",
+    "description": "Tuin Perfect - Uw tuin, onze zorg. Tuinaanleg, bestrating, onkruid en meer.",
+    "url": "https://tuinperfect.nl/",
+    "telephone": "+31685350145",
+    "address": { "@type": "PostalAddress", "addressCountry": "NL" },
+    "areaServed": ["Nederland", "België"],
+    "serviceType": ["Tuinaanleg", "Bestrating", "Tuinonderhoud", "Onkruidverwijdering", "Heggen snoeien"],
+    "priceRange": "€€"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'tp-black': '#0a0a0a',
+            'tp-surface': '#121414',
+            'tp-surface-elevated': '#1a1c1c',
+            'tp-surface-high': '#282a2b',
+            'tp-yellow': '#FCD202',
+            'tp-yellow-bright': '#ffe135',
+            'tp-yellow-dim': '#b89b00',
+            'tp-text': '#e2e2e2',
+            'tp-text-muted': '#b0a88a',
+            'tp-border': '#333535',
+          },
+          fontFamily: {
+            'cinzel': ['Cinzel', 'serif'],
+            'manrope': ['Manrope', 'sans-serif'],
+          },
+          maxWidth: {
+            'container': '1280px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Manrope', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .gold-border-top { border-top: 2px solid #FCD202; }
+    .gold-border-bottom { border-bottom: 1px solid rgba(252,210,2,0.3); }
+    .gold-border { border: 1px solid rgba(252,210,2,0.3); }
+    .gold-glow { box-shadow: 0 0 30px rgba(252,210,2,0.15); }
+    .hover-gold:hover { color: #FCD202; }
+    .mobile-nav-open { transform: translateX(0) !important; }
+    html { scroll-behavior: smooth; }
+    .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #FCD202; }
+  </style>
+</head>
+<body class="bg-tp-black text-tp-text overflow-x-hidden">
+
+<!-- Header -->
+<header class="fixed top-0 w-full gold-border-bottom z-50 bg-tp-black/95 backdrop-blur-md">
+  <div class="flex justify-between items-center px-6 py-4 max-w-container mx-auto">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect Logo" class="h-16 w-auto">
+      <span class="font-cinzel text-xl text-tp-yellow tracking-widest hidden sm:block font-semibold">Tuin Perfect</span>
+    </a>
+    <nav class="hidden md:flex gap-8">
+      <a href="index.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow border-b-2 border-tp-yellow pb-1">Home</a>
+      <a href="diensten.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Diensten</a>
+      <a href="projecten.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Projecten</a>
+      <a href="contact.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Contact</a>
+    </nav>
+    <a href="contact.html" class="bg-tp-yellow text-black text-xs font-bold uppercase tracking-[0.15em] px-6 py-2.5 hover:bg-tp-yellow-bright transition-colors hidden sm:block">Gratis offerte</a>
+    <button id="mobile-menu-btn" class="md:hidden text-tp-yellow text-2xl">☰</button>
+  </div>
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" class="fixed inset-y-0 right-0 w-72 bg-tp-surface border-l border-tp-border transform translate-x-full transition-transform duration-300 md:hidden z-50">
+    <div class="p-6">
+      <button id="mobile-menu-close" class="text-tp-yellow text-2xl mb-8">✕</button>
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-yellow">Home</a>
+        <a href="diensten.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Diensten</a>
+        <a href="projecten.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Projecten</a>
+        <a href="contact.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Contact</a>
+        <a href="contact.html" class="bg-tp-yellow text-black text-xs font-bold uppercase tracking-[0.15em] px-6 py-3 text-center mt-4">Gratis offerte</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="pt-[88px]">
+
+<!-- Hero -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-bg">
+  <div class="absolute inset-0 z-0 opacity-30">
+    <img src="images/eigenaar-profiel.jpg" alt="Tuin Perfect" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-b from-tp-black/80 via-tp-black/40 to-tp-black"></div>
+  </div>
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+    <h1 class="font-cinzel text-4xl md:text-5xl lg:text-6xl text-white mb-6 uppercase leading-tight tracking-wide fade-in">
+      Wij maken jouw tuin <span class="text-tp-yellow">Perfect.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-tp-text-muted max-w-2xl mx-auto mb-10 leading-relaxed fade-in">
+      Uw tuin, onze zorg. Van onkruid verwijderen tot complete tuinaanleg en bestrating — netjes, snel en 100% tevredenheid gegarandeerd. Door heel Nederland en België.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+      <a href="contact.html" class="bg-tp-yellow text-black text-xs font-bold uppercase tracking-[0.15em] px-10 py-4 hover:bg-tp-yellow-bright transition-all duration-300 shadow-lg shadow-tp-yellow/20 text-center">Gratis Offerte</a>
+      <a href="projecten.html" class="border border-tp-yellow text-tp-yellow text-xs font-bold uppercase tracking-[0.15em] px-10 py-4 hover:bg-tp-yellow/10 transition-all duration-300 text-center">Bekijk Projecten</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Banner -->
+<section class="bg-tp-yellow py-6">
+  <div class="max-w-container mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="fade-in">
+        <div class="font-cinzel text-3xl font-bold text-black">125+</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-black/70 mt-1">Tevreden klanten</div>
+      </div>
+      <div class="fade-in">
+        <div class="font-cinzel text-3xl font-bold text-black">24u</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-black/70 mt-1">Reactietijd</div>
+      </div>
+      <div class="fade-in">
+        <div class="font-cinzel text-3xl font-bold text-black">Gratis</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-black/70 mt-1">Afvoeren</div>
+      </div>
+      <div class="fade-in">
+        <div class="font-cinzel text-3xl font-bold text-black">NL + BE</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-black/70 mt-1">Werkgebied</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="bg-tp-surface-elevated py-20">
+  <div class="max-w-container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+      <div class="max-w-xl">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-tp-yellow uppercase mb-4 tracking-wide fade-in">Onze Expertise</h2>
+        <p class="text-tp-text-muted text-lg fade-in">Van bestrating tot complete tuinaanleg — wij verzorgen elke klus professioneel en netjes.</p>
+      </div>
+      <a href="diensten.html" class="border border-tp-yellow/50 text-tp-yellow px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] hover:bg-tp-yellow hover:text-black transition-all text-center fade-in">Alle Diensten</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-tp-black p-8 gold-border-top hover:bg-tp-surface-high transition-colors group fade-in">
+        <div class="w-12 h-12 flex items-center justify-center text-tp-yellow text-3xl mb-6 group-hover:scale-110 transition-transform">▣</div>
+        <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Bestrating</h4>
+        <p class="text-tp-text-muted mb-6 text-sm">Hoogwaardig straatwerk voor opritten, terrassen en paden. Duurzaam en strak gelegd.</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2 text-xs text-tp-text"><span class="text-tp-yellow">★</span> Sierbestrating</li>
+          <li class="flex items-center gap-2 text-xs text-tp-text"><span class="text-tp-yellow">★</span> Opritten</li>
+        </ul>
+      </div>
+      <div class="bg-tp-black p-8 gold-border-top hover:bg-tp-surface-high transition-colors group fade-in">
+        <div class="w-12 h-12 flex items-center justify-center text-tp-yellow text-3xl mb-6 group-hover:scale-110 transition-transform">⚘</div>
+        <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Tuinaanleg</h4>
+        <p class="text-tp-text-muted mb-6 text-sm">Complete transformatie van uw tuin. Van ontwerp tot de laatste plant in de grond.</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2 text-xs text-tp-text"><span class="text-tp-yellow">★</span> Beplanting & Gazon</li>
+          <li class="flex items-center gap-2 text-xs text-tp-text"><span class="text-tp-yellow">★</span> Schuttingen</li>
+        </ul>
+      </div>
+      <div class="bg-tp-black p-8 gold-border-top hover:bg-tp-surface-high transition-colors group fade-in">
+        <div class="w-12 h-12 flex items-center justify-center text-tp-yellow text-3xl mb-6 group-hover:scale-110 transition-transform">✂</div>
+        <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Onderhoud</h4>
+        <p class="text-tp-text-muted mb-6 text-sm">Houd uw tuin in topconditie met onze periodieke onderhoudsservice.</p>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2 text-xs text-tp-text"><span class="text-tp-yellow">★</span> Snoeiwerk</li>
+          <li class="flex items-center gap-2 text-xs text-tp-text"><span class="text-tp-yellow">★</span> Onkruidbestrijding</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Before/After -->
+<section class="py-24 px-6 max-w-container mx-auto">
+  <div class="mb-12">
+    <h2 class="font-cinzel text-2xl md:text-3xl text-tp-yellow uppercase mb-4 tracking-wide fade-in">Voor & Na</h2>
+    <p class="text-tp-text-muted text-lg max-w-xl fade-in">Bekijk hoe wij verwaarloosde tuinen omtoveren tot nette, strakke buitenruimtes.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="relative aspect-[4/3] overflow-hidden border border-tp-border fade-in">
+      <img src="images/before-after-tuin-na.jpg" alt="Na" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-4 left-4">
+        <span class="bg-tp-yellow text-black text-xs font-bold uppercase tracking-wider px-3 py-1">Tuin Renovatie</span>
+      </div>
+    </div>
+    <div class="relative aspect-[4/3] overflow-hidden border border-tp-border fade-in">
+      <img src="images/before-after-gazon-na.jpg" alt="Na" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute bottom-4 left-4">
+        <span class="bg-tp-yellow text-black text-xs font-bold uppercase tracking-wider px-3 py-1">Gazon & Borders</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-8 fade-in">
+    <a href="projecten.html" class="border border-tp-yellow/50 text-tp-yellow px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] hover:bg-tp-yellow hover:text-black transition-all inline-block">Alle Projecten</a>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-20 bg-tp-surface border-t border-tp-border">
+  <div class="max-w-container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <h2 class="font-cinzel text-2xl md:text-3xl text-white mb-6 uppercase tracking-wide fade-in">Vraag een <span class="text-tp-yellow">Vrijblijvende Offerte</span> aan</h2>
+      <p class="text-tp-text-muted mb-10 text-lg fade-in">Stuur een berichtje en wij nemen binnen 24 uur contact op voor een vrijblijvende offerte op locatie.</p>
+      <div class="space-y-6 fade-in">
+        <a href="tel:0685350145" class="flex items-center gap-4 group">
+          <div class="bg-tp-yellow/10 p-3 rounded border border-tp-yellow/30 group-hover:bg-tp-yellow/20 transition-colors">
+            <span class="text-tp-yellow text-xl">📞</span>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow">Telefoon</p>
+            <p class="text-white font-cinzel text-lg tracking-wide group-hover:text-tp-yellow transition-colors">06 8535 0145</p>
+          </div>
+        </a>
+        <div class="flex items-center gap-4">
+          <div class="bg-tp-yellow/10 p-3 rounded border border-tp-yellow/30">
+            <span class="text-tp-yellow text-xl">🕐</span>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow">Bereikbaar</p>
+            <p class="text-white font-cinzel text-lg tracking-wide">Maandag - Zaterdag: 08:00 - 18:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-tp-black p-10 border border-tp-border fade-in">
+      <h4 class="font-cinzel text-xl text-tp-yellow mb-6 uppercase tracking-wide">Contacteer Ons</h4>
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">Naam</label>
+            <input type="text" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors" required>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">Telefoon</label>
+            <input type="tel" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">E-mail</label>
+          <input type="email" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors" required>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">Bericht</label>
+          <textarea rows="4" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-tp-yellow text-black text-xs font-bold uppercase tracking-[0.15em] py-4 hover:bg-tp-yellow-bright transition-all">Aanvraag Verzenden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-tp-black border-t border-tp-border">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-6 py-16 max-w-container mx-auto">
+    <div class="space-y-6">
+      <div class="flex items-center gap-3">
+        <img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-14 w-auto">
+        <span class="font-cinzel text-xl text-tp-yellow tracking-widest font-semibold">Tuin Perfect</span>
+      </div>
+      <p class="text-tp-text-muted text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect! Wij werken door heel Nederland en België voor particulieren en bedrijven.</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-6">Diensten</h4>
+      <ul class="space-y-4">
+        <li><a href="diensten.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Bestrating</a></li>
+        <li><a href="diensten.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Tuinaanleg</a></li>
+        <li><a href="diensten.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Onderhoud</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-6">Contact</h4>
+      <address class="not-italic text-tp-text-muted space-y-4 text-sm">
+        <a href="tel:0685350145" class="flex items-center gap-3 hover:text-tp-yellow transition-colors">📞 06 8535 0145</a>
+        <p>Ma - Za: 08:00 - 18:00</p>
+      </address>
+    </div>
+  </div>
+  <div class="border-t border-tp-border py-6 px-6 text-center">
+    <p class="text-tp-text-muted text-xs">&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileNav = document.getElementById('mobile-nav');
+  mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('mobile-nav-open'); document.body.style.overflow = 'hidden'; });
+  mobileMenuClose.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-open'); document.body.style.overflow = ''; });
+  mobileNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('mobile-nav-open'); document.body.style.overflow = ''; }); });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

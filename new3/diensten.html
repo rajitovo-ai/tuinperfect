@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diensten | Tuin Perfect</title>
+  <meta name="description" content="Tuin Perfect biedt professionele diensten: bestrating, tuinaanleg, onderhoud, onkruidbestrijding en meer.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'tp-charcoal': '#1a1a1a','tp-dark': '#0d0d0d','tp-yellow': '#FFE100','tp-yellow-dim': '#b8a000','tp-gray': '#2a2a2a','tp-border': '#333',
+          },
+          fontFamily: { 'bebas': ['Bebas Neue','sans-serif'],'inter': ['Inter','sans-serif'] },
+          maxWidth: { 'container': '1400px' }
+        }
+      }
+    }
+  </script>
+  <style>body{font-family:'Inter',sans-serif;}.font-bebas{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;}.fade-in{opacity:0;transform:translateY(24px);transition:all .5s ease-out;}.fade-in.visible{opacity:1;transform:none;}.thick-line{height:6px;background:#FFE100;}.mobile-nav-open{transform:translateX(0)!important;}</style>
+</head>
+<body class="bg-tp-dark text-white overflow-x-hidden">
+
+<header class="fixed top-0 w-full bg-tp-charcoal/95 backdrop-blur-sm border-b-4 border-tp-yellow z-50">
+  <div class="flex justify-between items-center px-6 py-3 max-w-container mx-auto">
+    <a href="index.html" class="flex items-center gap-3"><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-12 w-auto"><span class="font-bebas text-2xl text-tp-yellow tracking-wider hidden sm:block">TUIN PERFECT</span></a>
+    <nav class="hidden md:flex gap-10">
+      <a href="index.html" class="text-sm font-bold uppercase tracking-widest text-white hover:text-tp-yellow transition-colors pb-1">Home</a>
+      <a href="diensten.html" class="text-sm font-bold uppercase tracking-widest text-tp-yellow border-b-2 border-tp-yellow pb-1">Diensten</a>
+      <a href="projecten.html" class="text-sm font-bold uppercase tracking-widest text-white hover:text-tp-yellow transition-colors pb-1">Projecten</a>
+      <a href="contact.html" class="text-sm font-bold uppercase tracking-widest text-white hover:text-tp-yellow transition-colors pb-1">Contact</a>
+    </nav>
+    <a href="contact.html" class="bg-tp-yellow text-black text-sm font-bold uppercase tracking-widest px-6 py-2 hover:bg-white transition-colors hidden sm:block">Offerte</a>
+    <button id="mobile-menu-btn" class="md:hidden text-tp-yellow text-2xl font-bold">☰</button>
+  </div>
+  <div id="mobile-nav" class="fixed inset-y-0 right-0 w-72 bg-tp-charcoal border-l-4 border-tp-yellow transform translate-x-full transition-transform duration-300 md:hidden z-50">
+    <div class="p-6"><button id="mobile-menu-close" class="text-tp-yellow text-2xl font-bold mb-8">✕</button>
+      <nav class="flex flex-col gap-6"><a href="index.html" class="text-lg font-bold uppercase tracking-widest text-white hover:text-tp-yellow transition-colors">Home</a><a href="diensten.html" class="text-lg font-bold uppercase tracking-widest text-tp-yellow">Diensten</a><a href="projecten.html" class="text-lg font-bold uppercase tracking-widest text-white hover:text-tp-yellow transition-colors">Projecten</a><a href="contact.html" class="text-lg font-bold uppercase tracking-widest text-white hover:text-tp-yellow transition-colors">Contact</a></nav>
+    </div>
+  </div>
+</header>
+
+<main class="pt-[72px]">
+
+<section class="py-20 bg-tp-charcoal">
+  <div class="max-w-container mx-auto px-6">
+    <div class="mb-12">
+      <div class="thick-line w-16 mb-4 fade-in"></div>
+      <h1 class="font-bebas text-4xl md:text-5xl text-tp-yellow tracking-wider fade-in">ONZE DIENSTEN</h1>
+      <p class="text-white/60 mt-4 max-w-xl fade-in">Van bestrating tot complete tuinaanleg — wij verzorgen elke klus professioneel.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+      <div class="border-4 border-tp-yellow bg-tp-dark p-10 fade-in">
+        <div class="font-bebas text-6xl text-tp-yellow mb-4">01</div>
+        <h4 class="font-bebas text-2xl text-white mb-4 tracking-wider">BESTRATING</h4>
+        <p class="text-white/60 text-sm leading-relaxed mb-6">Hoogwaardig straatwerk voor opritten, terrassen en paden. Duurzaam en strak gelegd.</p>
+        <ul class="space-y-2"><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Sierbestrating</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Opritten</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Terrassen</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Tuinpaden</li></ul>
+      </div>
+      <div class="border-4 border-tp-yellow border-l-0 md:border-l-4 bg-tp-yellow text-black p-10 fade-in">
+        <div class="font-bebas text-6xl text-black/20 mb-4">02</div>
+        <h4 class="font-bebas text-2xl mb-4 tracking-wider">TUINAANLEG</h4>
+        <p class="text-black/70 text-sm leading-relaxed mb-6">Complete transformatie van uw tuin. Van ontwerp tot de laatste plant.</p>
+        <ul class="space-y-2"><li class="flex items-center gap-2 text-xs"><span>▸</span> Beplanting & Gazon</li><li class="flex items-center gap-2 text-xs"><span>▸</span> Schuttingen</li><li class="flex items-center gap-2 text-xs"><span>▸</span> Overkappingen</li><li class="flex items-center gap-2 text-xs"><span>▸</span> Verlichting</li></ul>
+      </div>
+      <div class="border-4 border-tp-yellow border-t-0 md:border-t-4 bg-tp-dark p-10 fade-in">
+        <div class="font-bebas text-6xl text-tp-yellow mb-4">03</div>
+        <h4 class="font-bebas text-2xl text-white mb-4 tracking-wider">ONDERHOUD</h4>
+        <p class="text-white/60 text-sm leading-relaxed mb-6">Houd uw tuin in topconditie met onze periodieke onderhoudsservice.</p>
+        <ul class="space-y-2"><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Snoeiwerk</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Onkruidbestrijding</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Heggen snoeien</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Gazononderhoud</li></ul>
+      </div>
+      <div class="border-4 border-tp-yellow border-t-0 md:border-t-4 border-l-0 md:border-l-4 bg-tp-dark p-10 fade-in">
+        <div class="font-bebas text-6xl text-tp-yellow mb-4">04</div>
+        <h4 class="font-bebas text-2xl text-white mb-4 tracking-wider">SLOOP & AFVOER</h4>
+        <p class="text-white/60 text-sm leading-relaxed mb-6">Wij slopen en voeren gratis af. Geen zorgen, geen extra kosten.</p>
+        <ul class="space-y-2"><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Gratis afvoeren</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Sloopwerk</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Grondverzet</li><li class="flex items-center gap-2 text-xs text-white/80"><span class="text-tp-yellow">▸</span> Opruimen</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-tp-dark border-t-4 border-tp-yellow">
+  <div class="max-w-container mx-auto px-6 text-center">
+    <h2 class="font-bebas text-4xl md:text-5xl text-white mb-6 tracking-wider fade-in">KLAAR VOOR EEN <span class="text-tp-yellow">PERFECTE</span> TUIN?</h2>
+    <p class="text-white/60 mb-10 max-w-xl mx-auto text-lg fade-in">Vraag vandaag nog een vrijblijvende offerte aan. Wij komen gratis langs op locatie.</p>
+    <a href="contact.html" class="bg-tp-yellow text-black text-sm font-bold uppercase tracking-widest px-10 py-4 hover:bg-white transition-all inline-block fade-in">GRATIS OFFERTE AANVRAGEN</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-tp-dark border-t-4 border-tp-yellow">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-6 py-16 max-w-container mx-auto">
+    <div><div class="flex items-center gap-3 mb-4"><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-12 w-auto"><span class="font-bebas text-2xl text-tp-yellow tracking-wider">TUIN PERFECT</span></div><p class="text-white/60 text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect!</p></div>
+    <div><h4 class="text-sm font-bold uppercase tracking-widest text-tp-yellow mb-6">Pagina's</h4><ul class="space-y-3"><li><a href="index.html" class="text-white/60 hover:text-tp-yellow transition-colors text-sm uppercase tracking-wider">Home</a></li><li><a href="diensten.html" class="text-white/60 hover:text-tp-yellow transition-colors text-sm uppercase tracking-wider">Diensten</a></li><li><a href="projecten.html" class="text-white/60 hover:text-tp-yellow transition-colors text-sm uppercase tracking-wider">Projecten</a></li><li><a href="contact.html" class="text-white/60 hover:text-tp-yellow transition-colors text-sm uppercase tracking-wider">Contact</a></li></ul></div>
+    <div><h4 class="text-sm font-bold uppercase tracking-widest text-tp-yellow mb-6">Contact</h4><div class="space-y-3 text-white/60 text-sm"><p class="flex items-center gap-3"><span class="text-tp-yellow">📞</span> 06 8535 0145</p><p class="flex items-center gap-3"><span class="text-tp-yellow">🕐</span> MA - ZA: 08:00 - 18:00</p></div></div>
+  </div>
+  <div class="border-t border-tp-border py-6 px-6 text-center"><p class="text-white/40 text-xs uppercase tracking-widest">&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p></div>
+</footer>
+
+<script>
+  const mobileMenuBtn=document.getElementById('mobile-menu-btn');const mobileMenuClose=document.getElementById('mobile-menu-close');const mobileNav=document.getElementById('mobile-nav');
+  mobileMenuBtn.addEventListener('click',()=>{mobileNav.classList.add('mobile-nav-open');document.body.style.overflow='hidden';});
+  mobileMenuClose.addEventListener('click',()=>{mobileNav.classList.remove('mobile-nav-open');document.body.style.overflow='';});
+  mobileNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileNav.classList.remove('mobile-nav-open');document.body.style.overflow='';});});
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

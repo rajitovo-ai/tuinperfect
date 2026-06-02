@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Tuin Perfect</title>
+  <meta name="description" content="Neem contact op met Tuin Perfect voor een vrijblijvende offerte.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'tp-black': '#0a0a0a','tp-surface': '#121414','tp-surface-elevated': '#1a1c1c','tp-yellow': '#FCD202','tp-yellow-bright': '#ffe135','tp-text': '#e2e2e2','tp-text-muted': '#b0a88a','tp-border': '#333535',
+          },
+          fontFamily: { 'cinzel': ['Cinzel', 'serif'], 'manrope': ['Manrope', 'sans-serif'] },
+          maxWidth: { 'container': '1280px' }
+        }
+      }
+    }
+  </script>
+  <style>body{font-family:'Manrope',sans-serif;}.font-cinzel{font-family:'Cinzel',serif;}.fade-in{opacity:0;transform:translateY(20px);transition:all .6s ease-out;}.fade-in.visible{opacity:1;transform:none;}.gold-border-bottom{border-bottom:1px solid rgba(252,210,2,.3);}.mobile-nav-open{transform:translateX(0)!important;}html{scroll-behavior:smooth;}</style>
+</head>
+<body class="bg-tp-black text-tp-text overflow-x-hidden">
+
+<header class="fixed top-0 w-full gold-border-bottom z-50 bg-tp-black/95 backdrop-blur-md">
+  <div class="flex justify-between items-center px-6 py-4 max-w-container mx-auto">
+    <a href="index.html" class="flex items-center gap-3"><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-16 w-auto"><span class="font-cinzel text-xl text-tp-yellow tracking-widest hidden sm:block font-semibold">Tuin Perfect</span></a>
+    <nav class="hidden md:flex gap-8">
+      <a href="index.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors pb-1">Home</a>
+      <a href="diensten.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors pb-1">Diensten</a>
+      <a href="projecten.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors pb-1">Projecten</a>
+      <a href="contact.html" class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow border-b-2 border-tp-yellow pb-1">Contact</a>
+    </nav>
+    <a href="contact.html" class="bg-tp-yellow text-black text-xs font-bold uppercase tracking-[0.15em] px-6 py-2.5 hover:bg-tp-yellow-bright transition-colors hidden sm:block">Gratis offerte</a>
+    <button id="mobile-menu-btn" class="md:hidden text-tp-yellow text-2xl">☰</button>
+  </div>
+  <div id="mobile-nav" class="fixed inset-y-0 right-0 w-72 bg-tp-surface border-l border-tp-border transform translate-x-full transition-transform duration-300 md:hidden z-50">
+    <div class="p-6">
+      <button id="mobile-menu-close" class="text-tp-yellow text-2xl mb-8">✕</button>
+      <nav class="flex flex-col gap-6">
+        <a href="index.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Home</a>
+        <a href="diensten.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Diensten</a>
+        <a href="projecten.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-text hover:text-tp-yellow transition-colors">Projecten</a>
+        <a href="contact.html" class="text-sm font-bold uppercase tracking-[0.15em] text-tp-yellow">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="pt-[88px]">
+
+<section class="py-20 bg-tp-surface-elevated">
+  <div class="max-w-container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h1 class="font-cinzel text-3xl md:text-4xl text-tp-yellow uppercase tracking-wide fade-in">Contact</h1>
+      <p class="text-tp-text-muted mt-4 max-w-2xl mx-auto fade-in">Stuur een berichtje en wij nemen binnen 24 uur contact op voor een vrijblijvende offerte op locatie.</p>
+    </div>
+    <div class="max-w-2xl mx-auto fade-in">
+      <form class="bg-tp-black p-10 border border-tp-border">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div><label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">Naam</label><input type="text" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors" required></div>
+          <div><label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">Telefoon</label><input type="tel" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors"></div>
+        </div>
+        <div class="mb-6"><label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">E-mail</label><input type="email" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors" required></div>
+        <div class="mb-6"><label class="block text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-2">Bericht</label><textarea rows="4" class="w-full bg-tp-surface border border-tp-border text-white p-3 outline-none focus:border-tp-yellow transition-colors resize-none"></textarea></div>
+        <button type="submit" class="w-full bg-tp-yellow text-black text-xs font-bold uppercase tracking-[0.15em] py-4 hover:bg-tp-yellow-bright transition-all">Aanvraag Verzenden</button>
+      </form>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
+      <div class="fade-in"><div class="text-tp-yellow text-2xl mb-2">📞</div><p class="font-cinzel text-white text-lg">06 8535 0145</p><p class="text-tp-text-muted text-sm">Telefoon</p></div>
+      <div class="fade-in"><div class="text-tp-yellow text-2xl mb-2">🕐</div><p class="font-cinzel text-white text-lg">Ma - Za</p><p class="text-tp-text-muted text-sm">08:00 - 18:00</p></div>
+      <div class="fade-in"><div class="text-tp-yellow text-2xl mb-2">🌍</div><p class="font-cinzel text-white text-lg">NL + BE</p><p class="text-tp-text-muted text-sm">Werkgebied</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-tp-black border-t border-tp-border">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-6 py-16 max-w-container mx-auto">
+    <div class="space-y-6"><div class="flex items-center gap-3"><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-14 w-auto"><span class="font-cinzel text-xl text-tp-yellow tracking-widest font-semibold">Tuin Perfect</span></div><p class="text-tp-text-muted text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect!</p></div>
+    <div><h4 class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-6">Pagina's</h4><ul class="space-y-4"><li><a href="index.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Home</a></li><li><a href="diensten.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Diensten</a></li><li><a href="projecten.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Projecten</a></li><li><a href="contact.html" class="text-tp-text-muted hover:text-tp-yellow transition-colors text-sm">Contact</a></li></ul></div>
+    <div><h4 class="text-xs font-bold uppercase tracking-[0.15em] text-tp-yellow mb-6">Contact</h4><div class="text-tp-text-muted space-y-4 text-sm"><p>📞 06 8535 0145</p><p>🕐 Ma - Za: 08:00 - 18:00</p></div></div>
+  </div>
+  <div class="border-t border-tp-border py-6 px-6 text-center"><p class="text-tp-text-muted text-xs">&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p></div>
+</footer>
+
+<script>
+  const mobileMenuBtn=document.getElementById('mobile-menu-btn');const mobileMenuClose=document.getElementById('mobile-menu-close');const mobileNav=document.getElementById('mobile-nav');
+  mobileMenuBtn.addEventListener('click',()=>{mobileNav.classList.add('mobile-nav-open');document.body.style.overflow='hidden';});
+  mobileMenuClose.addEventListener('click',()=>{mobileNav.classList.remove('mobile-nav-open');document.body.style.overflow='';});
+  mobileNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileNav.classList.remove('mobile-nav-open');document.body.style.overflow='';});});
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

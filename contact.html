@@ -128,7 +128,9 @@
           <h2 class="section-title" style="margin-bottom: 8px; font-size: clamp(24px, 3vw, 36px);">Stuur een <span>Bericht</span></h2>
           <p style="color: var(--color-text-muted); margin-bottom: 32px; margin-top: 16px;">Vul het formulier in en wij nemen zo snel mogelijk contact met u op. Altijd vrijblijvend.</p>
 
-          <form class="tp-form" action="#" method="POST">
+          <form class="tp-form" action="mail.php" method="POST">
+            <input type="text" name="website_url" style="position:absolute;left:-9999px;opacity:0;" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="csrf_token" value="">
             <div class="form-row">
               <div class="form-group">
                 <label for="c-naam">Naam *</label>
@@ -174,6 +176,7 @@
               Verstuur Aanvraag — Gratis & Vrijblijvend
             </button>
             <div class="form-feedback"></div>
+            <input type="text" name="bedrijfsnaam_extra" style="position:absolute;left:-9999px;opacity:0;" tabindex="-1" autocomplete="off">
           </form>
         </div>
 

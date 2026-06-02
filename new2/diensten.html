@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diensten | Tuin Perfect</title>
+  <meta name="description" content="Tuin Perfect biedt professionele diensten: bestrating, tuinaanleg, onderhoud, onkruidbestrijding en meer.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'tp-yellow': '#FCD202','tp-yellow-dark': '#d4b000','tp-black': '#121414','tp-gray': '#f5f5f0','tp-gray-dark': '#e8e8e0',
+          },
+          fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+          maxWidth: { 'container': '1280px' }
+        }
+      }
+    }
+  </script>
+  <style>body{font-family:'Inter',sans-serif;}.fade-in{opacity:0;transform:translateY(20px);transition:all .6s ease-out;}.fade-in.visible{opacity:1;transform:none;}.nav-link{position:relative;}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#FCD202;transition:width .3s ease;}.nav-link:hover::after{width:100%;}</style>
+</head>
+<body class="bg-white text-tp-black overflow-x-hidden">
+
+<nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-gray-100">
+  <div class="max-w-container mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html"><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-12 w-auto"></a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link text-sm font-semibold text-gray-600 hover:text-tp-black transition-colors">Home</a>
+        <a href="diensten.html" class="nav-link active text-sm font-semibold text-tp-yellow-dark">Diensten</a>
+        <a href="projecten.html" class="nav-link text-sm font-semibold text-gray-600 hover:text-tp-black transition-colors">Projecten</a>
+        <a href="contact.html" class="nav-link text-sm font-semibold text-gray-600 hover:text-tp-black transition-colors">Contact</a>
+        <a href="contact.html" class="bg-tp-yellow text-black text-sm font-bold py-2.5 px-6 hover:bg-tp-yellow-dark transition-all">Offerte</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-tp-black"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t"><div class="px-4 py-4 space-y-3"><a href="index.html" class="block py-2 text-gray-600 font-medium">Home</a><a href="diensten.html" class="block py-2 text-tp-yellow-dark font-medium">Diensten</a><a href="projecten.html" class="block py-2 text-gray-600 font-medium">Projecten</a><a href="contact.html" class="block py-2 text-gray-600 font-medium">Contact</a></div></div>
+</nav>
+
+<section class="pt-32 pb-20 bg-white">
+  <div class="max-w-container mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <span class="text-tp-yellow-dark font-semibold uppercase tracking-wider text-sm">Wat wij doen</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-tp-black mt-3 mb-4">Onze Diensten</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Van bestrating tot complete tuinaanleg — wij verzorgen elke klus professioneel.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="bg-tp-gray rounded-2xl p-8 fade-in">
+        <div class="w-16 h-16 bg-tp-yellow/20 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-tp-yellow-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg></div>
+        <h3 class="text-xl font-bold text-tp-black mb-3">Bestrating</h3>
+        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Hoogwaardig straatwerk voor opritten, terrassen en paden. Duurzaam en strak gelegd door ervaren vakmensen.</p>
+        <ul class="space-y-2 text-sm text-gray-600"><li>✦ Sierbestrating</li><li>✦ Opritten</li><li>✦ Terrassen</li><li>✦ Tuinpaden</li></ul>
+      </div>
+      <div class="bg-tp-yellow rounded-2xl p-8 fade-in">
+        <div class="w-16 h-16 bg-black/10 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg></div>
+        <h3 class="text-xl font-bold text-black mb-3">Tuinaanleg</h3>
+        <p class="text-black/70 mb-4 text-sm leading-relaxed">Complete transformatie van uw tuin. Van ontwerp tot de laatste plant in de grond.</p>
+        <ul class="space-y-2 text-sm text-black/70"><li>✦ Beplanting & Gazon</li><li>✦ Schuttingen</li><li>✦ Overkappingen</li><li>✦ Verlichting</li></ul>
+      </div>
+      <div class="bg-tp-gray rounded-2xl p-8 fade-in">
+        <div class="w-16 h-16 bg-tp-yellow/20 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-tp-yellow-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg></div>
+        <h3 class="text-xl font-bold text-tp-black mb-3">Tuinonderhoud</h3>
+        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Houd uw tuin in topconditie met onze periodieke onderhoudsservice.</p>
+        <ul class="space-y-2 text-sm text-gray-600"><li>✦ Snoeiwerk</li><li>✦ Onkruidbestrijding</li><li>✦ Heggen snoeien</li><li>✦ Gazononderhoud</li></ul>
+      </div>
+      <div class="bg-tp-gray rounded-2xl p-8 fade-in">
+        <div class="w-16 h-16 bg-tp-yellow/20 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-tp-yellow-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg></div>
+        <h3 class="text-xl font-bold text-tp-black mb-3">Sloop & Afvoer</h3>
+        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Wij slopen en voeren gratis af. Geen zorgen, geen extra kosten.</p>
+        <ul class="space-y-2 text-sm text-gray-600"><li>✦ Gratis afvoeren</li><li>✦ Sloopwerk</li><li>✦ Grondverzet</li><li>✦ Opruimen</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-tp-black">
+  <div class="max-w-container mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 fade-in">Klaar voor een <span class="text-tp-yellow">perfecte</span> tuin?</h2>
+    <p class="text-white/80 text-lg max-w-xl mx-auto mb-10 fade-in">Vraag vandaag nog een vrijblijvende offerte aan. Wij komen gratis langs op locatie.</p>
+    <a href="contact.html" class="inline-block bg-tp-yellow text-black font-bold py-4 px-10 rounded-lg hover:bg-tp-yellow-dark transition-all fade-in">GRATIS OFFERTE AANVRAGEN</a>
+  </div>
+</section>
+
+<footer class="bg-tp-black text-white py-12">
+  <div class="max-w-container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-10 w-auto mb-4"><p class="text-white/80 text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect!</p></div>
+      <div><h4 class="font-bold text-lg mb-4">Pagina's</h4><ul class="space-y-2 text-white/80"><li><a href="index.html" class="hover:text-tp-yellow transition-colors">Home</a></li><li><a href="diensten.html" class="hover:text-tp-yellow transition-colors">Diensten</a></li><li><a href="projecten.html" class="hover:text-tp-yellow transition-colors">Projecten</a></li><li><a href="contact.html" class="hover:text-tp-yellow transition-colors">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-4">Contact</h4><ul class="space-y-2 text-white/80"><li>📞 06 8535 0145</li><li>🕐 Ma - Za: 08:00 - 18:00</li></ul></div>
+    </div>
+    <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm"><p>&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden');});
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

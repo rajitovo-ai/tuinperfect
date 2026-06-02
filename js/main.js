@@ -213,11 +213,25 @@ document.addEventListener('DOMContentLoaded', function () {
     ctaImg.addEventListener('mouseleave', function () { if (img) img.style.filter = 'grayscale(100%)'; });
   }
 
-  // Form handling
+  // ── Mailformulier handling (AJAX naar mail.php) ─────────────────────────
+  let mailCsrfToken = '';
+
+  // Haal CSRF-token op bij laden
+  fetch('mail.php?csrf=1')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data && data.csrf) {
+        mailCsrfToken = data.csrf;
+        document.querySelectorAll('form.tp-form input[name="csrf_token"]').forEach(function (el) { el.value = mailCsrfToken; });
+      }
+    })
+    .catch(function () { /* fallback: token blijft leeg, server geeft dan fout */ });
+
   document.querySelectorAll('form.tp-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const feedback = form.querySelector('.form-feedback');
+      const submitBtn = form.querySelector('button[type="submit"]');
       const required = form.querySelectorAll('[required]');
       let valid = true;
       required.forEach(function (f) {
@@ -228,8 +242,32 @@ document.addEventListener('DOMContentLoaded', function () {
         if (feedback) { feedback.className = 'form-feedback error'; feedback.style.display = 'block'; feedback.textContent = 'Vul alle verplichte velden in.'; }
         return;
       }
-      if (feedback) { feedback.className = 'form-feedback success'; feedback.style.display = 'block'; feedback.textContent = 'Bedankt! We nemen binnen 24 uur contact met u op.'; }
-      form.querySelectorAll('input:not([type=submit]), textarea, select').forEach(function (f) { f.value = ''; });
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Bezig met versturen…'; }
+      if (feedback) { feedback.className = 'form-feedback'; feedback.style.display = 'block'; feedback.textContent = ''; }
+
+      const formData = new FormData(form);
+      if (mailCsrfToken) { formData.set('csrf_token', mailCsrfToken); }
+
+      fetch('mail.php', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (submitBtn) { submitBtn.disabled = false; }
+        if (data && data.success) {
+          if (feedback) { feedback.className = 'form-feedback success'; feedback.style.display = 'block'; feedback.textContent = data.message || 'Bedankt! We nemen binnen 24 uur contact met u op.'; }
+          form.querySelectorAll('input:not([type=submit]):not([type=hidden]), textarea, select').forEach(function (f) { f.value = ''; });
+        } else {
+          if (feedback) { feedback.className = 'form-feedback error'; feedback.style.display = 'block'; feedback.textContent = (data && data.message) ? data.message : 'Er is iets misgegaan. Probeer het later opnieuw.'; }
+        }
+      })
+      .catch(function () {
+        if (submitBtn) { submitBtn.disabled = false; }
+        if (feedback) { feedback.className = 'form-feedback error'; feedback.style.display = 'block'; feedback.textContent = 'Er is iets misgegaan bij het versturen. Controleer uw internetverbinding.'; }
+      });
     });
   });
 

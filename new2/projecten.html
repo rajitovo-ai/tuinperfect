@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecten | Tuin Perfect</title>
+  <meta name="description" content="Bekijk de afgeronde projecten van Tuin Perfect. Tuinrenovaties, bestrating, gazon en meer.">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'tp-yellow': '#FCD202','tp-yellow-dark': '#d4b000','tp-black': '#121414','tp-gray': '#f5f5f0',
+          },
+          fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+          maxWidth: { 'container': '1280px' }
+        }
+      }
+    }
+  </script>
+  <style>body{font-family:'Inter',sans-serif;}.fade-in{opacity:0;transform:translateY(20px);transition:all .6s ease-out;}.fade-in.visible{opacity:1;transform:none;}.nav-link{position:relative;}.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#FCD202;transition:width .3s ease;}.nav-link:hover::after{width:100%;}</style>
+</head>
+<body class="bg-white text-tp-black overflow-x-hidden">
+
+<nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-gray-100">
+  <div class="max-w-container mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+      <a href="index.html"><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-12 w-auto"></a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="nav-link text-sm font-semibold text-gray-600 hover:text-tp-black transition-colors">Home</a>
+        <a href="diensten.html" class="nav-link text-sm font-semibold text-gray-600 hover:text-tp-black transition-colors">Diensten</a>
+        <a href="projecten.html" class="nav-link active text-sm font-semibold text-tp-yellow-dark">Projecten</a>
+        <a href="contact.html" class="nav-link text-sm font-semibold text-gray-600 hover:text-tp-black transition-colors">Contact</a>
+        <a href="contact.html" class="bg-tp-yellow text-black text-sm font-bold py-2.5 px-6 hover:bg-tp-yellow-dark transition-all">Offerte</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-tp-black"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t"><div class="px-4 py-4 space-y-3"><a href="index.html" class="block py-2 text-gray-600 font-medium">Home</a><a href="diensten.html" class="block py-2 text-gray-600 font-medium">Diensten</a><a href="projecten.html" class="block py-2 text-tp-yellow-dark font-medium">Projecten</a><a href="contact.html" class="block py-2 text-gray-600 font-medium">Contact</a></div></div>
+</nav>
+
+<section class="pt-32 pb-20 bg-tp-gray">
+  <div class="max-w-container mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <span class="text-tp-yellow-dark font-semibold uppercase tracking-wider text-sm">Ons Werk</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-tp-black mt-3 mb-4">Onze Projecten</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg">Bekijk de transformaties die wij hebben gerealiseerd voor tevreden klanten.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="rounded-xl overflow-hidden shadow-lg bg-white fade-in group">
+        <div class="relative h-64 overflow-hidden"><img src="images/before-after-tuin-na.jpg" alt="Tuin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><span class="absolute top-4 left-4 bg-tp-yellow text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Tuinaanleg</span></div>
+        <div class="p-6"><h3 class="text-xl font-bold text-tp-black">Achtertuin Renovatie</h3><p class="text-gray-600 text-sm mt-2">Complete transformatie van een verwaarloosde tuin.</p></div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-lg bg-white fade-in group">
+        <div class="relative h-64 overflow-hidden"><img src="images/before-after-gazon-na.jpg" alt="Gazon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><span class="absolute top-4 left-4 bg-tp-yellow text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Onderhoud</span></div>
+        <div class="p-6"><h3 class="text-xl font-bold text-tp-black">Gazon & Borders</h3><p class="text-gray-600 text-sm mt-2">Van dorre vlakte naar groen gazon.</p></div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-lg bg-white fade-in group">
+        <div class="relative h-64 overflow-hidden"><img src="images/before-after-oprit-na.jpg" alt="Oprit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><span class="absolute top-4 left-4 bg-tp-yellow text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Bestrating</span></div>
+        <div class="p-6"><h3 class="text-xl font-bold text-tp-black">Oprit Bestrating</h3><p class="text-gray-600 text-sm mt-2">Verzakte oprit hersteld met strakke klinkers.</p></div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-lg bg-white fade-in group">
+        <div class="relative h-64 overflow-hidden"><img src="images/before-after-bestrating.jpg" alt="Bestrating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><span class="absolute top-4 left-4 bg-tp-yellow text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Bestrating</span></div>
+        <div class="p-6"><h3 class="text-xl font-bold text-tp-black">Terras Project</h3><p class="text-gray-600 text-sm mt-2">Nieuw terras met sierbestrating.</p></div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-lg bg-white fade-in group">
+        <div class="relative h-64 overflow-hidden"><img src="images/before-after-haag-voor.jpg" alt="Heg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><span class="absolute top-4 left-4 bg-tp-yellow text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Onderhoud</span></div>
+        <div class="p-6"><h3 class="text-xl font-bold text-tp-black">Heggen Snoeien</h3><p class="text-gray-600 text-sm mt-2">Professioneel snoeiwerk.</p></div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-lg bg-white fade-in group">
+        <div class="relative h-64 overflow-hidden"><img src="images/before-after-keramisch.jpg" alt="Keramisch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div><span class="absolute top-4 left-4 bg-tp-yellow text-black text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider">Bestrating</span></div>
+        <div class="p-6"><h3 class="text-xl font-bold text-tp-black">Keramische Tegels</h3><p class="text-gray-600 text-sm mt-2">Luxe keramische tegels gelegd.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-tp-black text-white py-12">
+  <div class="max-w-container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div><img src="logo/logo_horizontal_clean.svg" alt="Tuin Perfect" class="h-10 w-auto mb-4"><p class="text-white/80 text-sm leading-relaxed">Uw tuin, onze zorg. Altijd perfect!</p></div>
+      <div><h4 class="font-bold text-lg mb-4">Pagina's</h4><ul class="space-y-2 text-white/80"><li><a href="index.html" class="hover:text-tp-yellow transition-colors">Home</a></li><li><a href="diensten.html" class="hover:text-tp-yellow transition-colors">Diensten</a></li><li><a href="projecten.html" class="hover:text-tp-yellow transition-colors">Projecten</a></li><li><a href="contact.html" class="hover:text-tp-yellow transition-colors">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-4">Contact</h4><ul class="space-y-2 text-white/80"><li>📞 06 8535 0145</li><li>🕐 Ma - Za: 08:00 - 18:00</li></ul></div>
+    </div>
+    <div class="border-t border-white/20 pt-8 text-center text-white/60 text-sm"><p>&copy; 2025 Tuin Perfect. Alle rechten voorbehouden.</p></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden');});
+  const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.1});
+  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
