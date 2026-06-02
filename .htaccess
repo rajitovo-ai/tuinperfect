@@ -12,14 +12,12 @@ Options -Indexes
 
 # Blokkeer directe toegang tot gevoelige configuratiebestanden
 <FilesMatch "^(smtp_config|site-config)\.php$">
-    Order Allow,Deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 
 # Blokkeer .env en andere gevoelige bestanden
 <FilesMatch "^\.">
-    Order Allow,Deny
-    Deny from all
+    Require all denied
 </FilesMatch>
 
 # Security headers
