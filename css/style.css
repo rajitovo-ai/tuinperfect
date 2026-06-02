@@ -2277,3 +2277,40 @@ body.page-leaving {
   align-items: center;
   flex-shrink: 0;
 }
+
+/* ---- COOKIE CONSENT ---- */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1e2020;
+  color: #e2e2e2;
+  padding: 10px 16px;
+  font-size: 12px;
+  display: none;
+  z-index: 9999;
+  border-top: 1px solid #2a2c2c;
+}
+.cookie-consent-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cookie-consent p { margin: 0; }
+.cookie-consent a { color: #FCD202; text-decoration: underline; }
+.cookie-consent-btn {
+  background: #FCD202;
+  color: #121414;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
