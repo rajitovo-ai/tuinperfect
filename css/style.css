@@ -1201,12 +1201,12 @@ body.page-leaving {
   display: inline-block;
   background: var(--color-primary);
   color: #000;
-  padding: 8px 20px;
+  padding: 10px 24px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   transform: skewX(-8deg);
   border-left: 6px solid #000;
 }
