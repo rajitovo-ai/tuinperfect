@@ -325,7 +325,9 @@ ul { list-style: none; }
   gap: 12px;
   color: var(--color-text);
 }
-.stat-icon { font-size: 28px; color: var(--color-primary); }
+.stat-icon { font-size: 28px; color: var(--color-primary); display: inline-flex; align-items: center; justify-content: center; }
+.icon-svg { width: 1em; height: 1em; vertical-align: middle; display: inline-block; }
+.hero-trust-item .icon-svg { width: 18px; height: 18px; color: var(--color-primary); }
 .stat-number {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
