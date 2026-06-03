@@ -732,6 +732,9 @@ ul { list-style: none; }
    ================================================================ */
 .page-hero {
   background-color: var(--color-bg-lowest);
+  background-image: linear-gradient(rgba(12, 15, 15, 0.82), rgba(12, 15, 15, 0.82)), url('../images/page_hero_bg.webp');
+  background-size: cover;
+  background-position: center;
   padding: 140px 0 60px;
   border-bottom: 4px solid var(--color-primary);
   position: relative;
