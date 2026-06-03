@@ -776,7 +776,7 @@ ul { list-style: none; }
 }
 .dienst-card-img-wrap { overflow: hidden; }
 .dienst-card-body { padding: 32px; }
-.dienst-card-body h3 {
+.dienst-card-body h2, .dienst-card-body h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -951,7 +951,7 @@ ul { list-style: none; }
 }
 .footer-brand img { height: 36px; width: auto; margin-bottom: 12px; }
 .footer-desc { color: var(--color-text-muted); font-size: 14px; line-height: 1.7; max-width: 280px; }
-.footer-col h4 {
+.footer-col h3, .footer-col h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -982,6 +982,7 @@ ul { list-style: none; }
   text-align: center;
 }
 .footer-copy { color: var(--color-text-dim); font-size: 13px; }
+.footer-copy a { color: #fff; text-decoration: underline; }
 .footer-status {
   display: flex;
   align-items: center;
