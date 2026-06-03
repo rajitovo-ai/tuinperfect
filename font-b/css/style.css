@@ -2298,3 +2298,9 @@ body.page-leaving {
   align-items: center;
   flex-shrink: 0;
 }
+@media (max-width: 640px) {
+  .proj-cta-inner { flex-direction: column; align-items: flex-start; }
+  .proj-cta-actions { width: 100%; }
+  .proj-cta-actions .btn-primary,
+  .proj-cta-actions .btn-whatsapp { flex: 1 1 auto; min-width: 140px; }
+}
