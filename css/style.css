@@ -857,17 +857,16 @@ ul { list-style: none; }
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  background: none;
+  opacity: 0;
 }
-.project-item:hover .project-overlay { opacity: 1; }
 .project-info {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   padding: 20px;
   transform: translateY(8px);
   transition: transform 0.3s ease;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 .project-item:hover .project-info { transform: translateY(0); }
 .project-tag {
@@ -2190,11 +2189,8 @@ body.page-leaving {
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0) 55%);
-  transition: opacity 0.3s ease;
-}
-.project-item:hover .project-overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 70%);
+  background: none;
+  opacity: 0;
 }
 .project-info {
   position: absolute;
@@ -2202,6 +2198,7 @@ body.page-leaving {
   padding: 20px;
   transform: translateY(4px);
   transition: transform 0.3s ease;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 .project-item:hover .project-info {
   transform: translateY(0);
