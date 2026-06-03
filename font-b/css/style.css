@@ -1108,13 +1108,6 @@ ul { list-style: none; }
 /* ================================================================
    PAGE TRANSITION
    ================================================================ */
-body {
-  opacity: 0;
-  transition: opacity 0.28s ease;
-}
-body.page-loaded {
-  opacity: 1;
-}
 body.page-leaving {
   opacity: 0;
   transition: opacity 0.22s ease;
