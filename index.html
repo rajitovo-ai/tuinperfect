@@ -6,6 +6,7 @@
   <title>Tuin Perfect | Wij maken jouw tuin Perfect!</title>
   <meta name="description" content="Tuin Perfect - Tuinaanleg, bestrating, snoeiwerk en onderhoud. Gratis afvoer! Door heel Nederland en België. Bel 06 853 501 45.">
   <meta name="theme-color" content="#121414">
+  <meta name="msapplication-TileColor" content="#121414">
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -16,11 +17,12 @@
   <meta property="og:url" content="https://tuin-perfect.nl/">
   <meta property="og:image" content="https://tuin-perfect.nl/images/eigenaar-profiel.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="icon" type="image/svg+xml" href="logo/favicon-logo.svg">
+  <link rel="shortcut icon" href="logo/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="logo/favicon-logo.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +30,7 @@
   <link rel="preload" href="css/style.min.css" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/reviews.css">
 </head>
 <body>
 
@@ -46,6 +49,7 @@
         <a href="index.html" class="active">Home</a>
         <a href="diensten.html">Diensten</a>
         <a href="projecten.html">Projecten</a>
+        <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact</a>
       </div>
       <a href="contact.html" class="btn-primary nav-cta">Offerte Aanvragen</a>
@@ -67,6 +71,7 @@
     <a href="index.html" class="active">Home</a>
     <a href="diensten.html">Diensten</a>
     <a href="projecten.html">Projecten</a>
+    <a href="reviews.html">Reviews</a>
     <a href="contact.html">Contact</a>
     <a href="https://wa.me/310685350145" class="mobile-whatsapp-link" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -261,6 +266,18 @@
     </div>
   </section>
 
+  <!-- HOMEPAGE REVIEWS PREVIEW -->
+  <section class="reviews-section" style="padding-top:0;">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Nextdoor Reviews</span>
+        <h2 class="section-title">Tevreden <span>Klanten</span></h2>
+      </div>
+      <div class="reviews-grid" id="homeReviewsGrid"></div>
+      <div style="text-align:center;margin-top:40px;" id="homeReviewsActions"></div>
+    </div>
+  </section>
+
   <!-- TRUST MARQUEE -->
   <div class="trust-banner">
     <div class="marquee">
@@ -426,6 +443,108 @@
   }
   </script>
   <script src="js/main.js"></script>
+
+  <!-- Homepage Reviews Loader -->
+  <script>
+    (function() {
+      const grid = document.getElementById('homeReviewsGrid');
+      const actions = document.getElementById('homeReviewsActions');
+      if (!grid) return;
+
+      const starSvg = '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+      const INITIAL = 3;
+      var allReviews = [];
+      var visibleCount = 0;
+
+      function formatDate(iso) {
+        try { return new Date(iso).toLocaleDateString('nl-NL', { day:'numeric', month:'long', year:'numeric' }); }
+        catch (e) { return iso; }
+      }
+
+      function escapeHtml(str) {
+        var d = document.createElement('div'); d.textContent = str; return d.innerHTML;
+      }
+
+      function buildCard(review) {
+        var long = review.text.length > 180;
+        var div = document.createElement('div');
+        div.className = 'review-card fade-in';
+        div.innerHTML =
+          '<div class="review-stars">' + starSvg.repeat(review.rating || 5) + '</div>' +
+          '<p class="' + (long ? 'review-text long' : 'review-text') + '">' + escapeHtml(review.text) + '</p>' +
+          (long ? '<button class="review-readmore" type="button">Lees meer</button>' : '') +
+          '<div class="review-footer">' +
+            '<div><div class="review-author">' + escapeHtml(review.name) + '</div>' +
+            '<div class="review-date">' + formatDate(review.date) + '</div></div>' +
+            '<span class="review-source">' + escapeHtml(review.source || 'Nextdoor') + '</span>' +
+          '</div>';
+        return div;
+      }
+
+      function renderSlice(count) {
+        var slice = allReviews.slice(0, count);
+        grid.innerHTML = '';
+        slice.forEach(function(r) { grid.appendChild(buildCard(r)); });
+        // observe new fade-in elements
+        document.querySelectorAll('#homeReviewsGrid .fade-in').forEach(function(el) {
+          var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+          }, { threshold: 0.12 });
+          obs.observe(el);
+        });
+        // readmore handlers
+        grid.querySelectorAll('.review-readmore').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var p = this.previousElementSibling;
+            if (p.classList.contains('long')) { p.classList.remove('long'); p.classList.add('expanded'); this.textContent = 'Lees minder'; }
+            else { p.classList.add('long'); p.classList.remove('expanded'); this.textContent = 'Lees meer'; }
+          });
+        });
+      }
+
+      function updateActions() {
+        if (!actions) return;
+        actions.innerHTML = '';
+        if (visibleCount < allReviews.length) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'btn-primary';
+          btn.style.cssText = 'font-size:15px;padding:14px 36px;border:none;cursor:pointer;';
+          btn.textContent = 'Laad meer reviews';
+          btn.addEventListener('click', function() {
+            visibleCount = allReviews.length;
+            renderSlice(visibleCount);
+            updateActions();
+          });
+          actions.appendChild(btn);
+        } else if (allReviews.length > INITIAL) {
+          var link = document.createElement('a');
+          link.href = 'reviews.html';
+          link.className = 'btn-outline';
+          link.style.cssText = 'font-size:15px;padding:14px 36px;display:inline-block;';
+          link.textContent = 'Bekijk alle reviews';
+          actions.appendChild(link);
+        }
+      }
+
+      fetch('./reviews.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (!Array.isArray(data) || data.length === 0) {
+            grid.innerHTML = '<div class="reviews-empty"><p>Nog geen reviews beschikbaar.</p></div>';
+            return;
+          }
+          allReviews = data;
+          visibleCount = Math.min(INITIAL, allReviews.length);
+          renderSlice(visibleCount);
+          updateActions();
+        })
+        .catch(function() {
+          grid.innerHTML = '<div class="reviews-empty"><p>Reviews kunnen momenteel niet worden geladen.</p></div>';
+        });
+    })();
+  </script>
+
 <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Cookie melding"><div class="cookie-consent-inner"><p>Deze website gebruikt functionele cookies. <a href="privacy.html">Privacyverklaring</a></p><button class="cookie-consent-btn" id="cookieAccept" type="button">Akkoord</button></div></div>
 </body>
 </html>
