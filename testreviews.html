@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Tuin Perfect — Wat Klanten Zeggen</title>
+  <meta name="description" content="Lees echte reviews van tevreden klanten van Tuin Perfect. Aanbevelingen van Nextdoor.">
+  <link rel="icon" type="image/svg+xml" href="logo/favicon-logo.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo/logo1739_clean_transparent.png" alt="Tuin Perfect" height="52" style="height:52px;width:auto;">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="btn-primary nav-cta">Offerte Aanvragen</a>
+      <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu openen">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="diensten.html">Diensten</a>
+    <a href="projecten.html">Projecten</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Reviews</span>
+      </div>
+      <span class="section-label">Ervaringen</span>
+      <h1 class="section-title" style="font-size: clamp(36px, 5vw, 64px);">Wat Klanten <span>Zeggen</span></h1>
+      <p style="margin-top: 20px; font-size: 18px; color: var(--color-text-muted); max-width: 560px;">Echte reviews van echte klanten. Gedeeld op Nextdoor door buren in Rotterdam en omgeving.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Nextdoor Reviews</span>
+        <h2 class="section-title">Tevreden <span>Klanten</span></h2>
+      </div>
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Reviews worden hier geladen via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="proj-cta-banner" style="margin-top:0;">
+    <div class="proj-cta-bg">
+      <img src="images/na4.jpeg" alt="">
+    </div>
+    <div class="proj-cta-overlay"></div>
+    <div class="container proj-cta-inner fade-in">
+      <div>
+        <span class="section-label">Klaar voor uw project?</span>
+        <h2 class="proj-cta-title">Ook een <span>Tevreden</span> Klant?</h2>
+        <p>Vraag vandaag nog een vrijblijvende offerte aan. Wij komen langs op locatie door heel NL &amp; België.</p>
+      </div>
+      <div class="proj-cta-actions">
+        <a href="contact.html" class="btn-primary" style="font-size:16px;padding:18px 36px;">Gratis Offerte</a>
+        <a href="https://wa.me/310685350145?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte!" class="btn-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST MARQUEE -->
+  <div class="trust-banner">
+    <div class="marquee">
+      <div class="marquee-item">
+        <span>Gratis Offerte</span>
+        <span>Vakmanschap</span>
+        <span>Gratis Afvoeren</span>
+        <span>NL &amp; België</span>
+        <span>100% Tevredenheid</span>
+      </div>
+      <div class="marquee-item" aria-hidden="true">
+        <span>Gratis Offerte</span>
+        <span>Vakmanschap</span>
+        <span>Gratis Afvoeren</span>
+        <span>NL &amp; België</span>
+        <span>100% Tevredenheid</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <picture><source srcset="logo/logonew-sm.webp" type="image/webp"><img src="logo/logonew-sm.png" alt="Tuin Perfect" width="150" height="64" onerror="this.style.display='none'"></picture>
+          </div>
+          <p class="footer-desc">Wij werken door heel Nederland en België voor particulieren en bedrijven.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Snelle Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="diensten.html">Diensten</a>
+            <a href="projecten.html">Projecten</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <div class="footer-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <a href="tel:+31685350145">06 853 501 45</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:info@tuin-perfect.nl">info@tuin-perfect.nl</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Nederland &amp; België</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <a href="https://wa.me/310685350145" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Tuin Perfect. Altijd Perfect! <a href="privacy.html" >Privacyverklaring</a></p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          <span>Beschikbaar voor Nieuwe Projecten</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/310685350145?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Tuin Perfect">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+
+  <!-- Reviews Loader -->
+  <script>
+    (function() {
+      const grid = document.getElementById('reviewsGrid');
+      if (!grid) return;
+
+      const starSvg = '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+
+      function formatDate(iso) {
+        try {
+          const d = new Date(iso);
+          return d.toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+        } catch (e) { return iso; }
+      }
+
+      function buildCard(review) {
+        const textLong = review.text.length > 180;
+        const textClass = textLong ? 'review-text long' : 'review-text';
+        const card = document.createElement('div');
+        card.className = 'review-card fade-in';
+        card.innerHTML =
+          '<div class="review-stars">' + starSvg.repeat(review.rating || 5) + '</div>' +
+          '<p class="' + textClass + '" data-text>' + escapeHtml(review.text) + '</p>' +
+          (textLong ? '<button class="review-readmore" type="button">Lees meer</button>' : '') +
+          '<div class="review-footer">' +
+            '<div>' +
+              '<div class="review-author">' + escapeHtml(review.name) + '</div>' +
+              '<div class="review-date">' + formatDate(review.date) + '</div>' +
+            '</div>' +
+            '<span class="review-source">' + escapeHtml(review.source || 'Nextdoor') + '</span>' +
+          '</div>';
+        return card;
+      }
+
+      function escapeHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      fetch('./reviews.json')
+        .then(function(r) { return r.json(); })
+        .then(function(reviews) {
+          if (!Array.isArray(reviews) || reviews.length === 0) {
+            grid.innerHTML = '<div class="reviews-empty"><p>Nog geen reviews beschikbaar.</p></div>';
+            return;
+          }
+          reviews.forEach(function(review) {
+            grid.appendChild(buildCard(review));
+          });
+          // Re-trigger fade-in observer for new elements
+          document.querySelectorAll('.fade-in').forEach(function(el) {
+            if (!el.classList.contains('visible')) {
+              // The main.js observer already handles this if we dispatch or just let it be
+              // But elements added after DOMContentLoaded need to be observed
+              var obs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                  if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+                });
+              }, { threshold: 0.12 });
+              obs.observe(el);
+            }
+          });
+          // Lees meer handlers
+          grid.querySelectorAll('.review-readmore').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              var p = this.previousElementSibling;
+              if (p && p.classList.contains('long')) {
+                p.classList.remove('long');
+                p.classList.add('expanded');
+                this.textContent = 'Lees minder';
+              } else if (p) {
+                p.classList.add('long');
+                p.classList.remove('expanded');
+                this.textContent = 'Lees meer';
+              }
+            });
+          });
+        })
+        .catch(function() {
+          grid.innerHTML = '<div class="reviews-empty"><p>Reviews kunnen momenteel niet worden geladen. Probeer het later opnieuw.</p></div>';
+        });
+    })();
+  </script>
+
+<div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Cookie melding"><div class="cookie-consent-inner"><p>Deze website gebruikt functionele cookies. <a href="privacy.html">Privacyverklaring</a></p><button class="cookie-consent-btn" id="cookieAccept" type="button">Akkoord</button></div></div>
+</body>
+</html>
