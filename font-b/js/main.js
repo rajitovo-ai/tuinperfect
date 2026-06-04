@@ -233,22 +233,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Filter buttons (projecten page)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectItems = document.querySelectorAll('.project-item[data-cat]');
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      const cat = btn.dataset.filter;
-      projectItems.forEach(function (item) {
-        if (cat === 'all' || item.dataset.cat === cat) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
 
 });
